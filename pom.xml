@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.tn5250j</groupId>
 	<artifactId>tn5250j</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.7.6.1</version>
 
 	<build>
 		<sourceDirectory>src</sourceDirectory>
@@ -93,7 +93,7 @@
 		<dependency>
 			<groupId>com.sun.mail</groupId>
 			<artifactId>javax.mail</artifactId>
-			<version>1.6.0</version>
+			<version>1.6.1</version>
 		</dependency>
 		<dependency>
 			<groupId>com.lowagie</groupId>

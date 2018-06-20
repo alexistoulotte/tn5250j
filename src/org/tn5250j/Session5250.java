@@ -337,7 +337,7 @@ public class Session5250 implements SessionInterface {
 	}
 
 	/**
-	 * @param listener
+	 * @param listener a listener to add
 	 */
 	public final void addScanListener(ScanListener listener) {
 		scanListenerLock.writeLock().lock();

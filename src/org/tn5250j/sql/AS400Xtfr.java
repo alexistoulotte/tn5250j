@@ -243,7 +243,7 @@ public class AS400Xtfr {
     * Send the user id and password to the connected host
     *
     * @param user  The user name
-    * @param password  The password of the user
+    * @param passWord  The password of the user
     */
    public boolean login(String user, String passWord) {
 

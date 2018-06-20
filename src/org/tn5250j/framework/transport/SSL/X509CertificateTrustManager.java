@@ -37,7 +37,7 @@ import javax.swing.JOptionPane;
  * CA (Verisign, Thawte, etc.).
  *
  * @author Stephen M. Kennedy
- * @deprecated.  no longer used.
+ * @deprecated  no longer used.
  *
  */
 public class X509CertificateTrustManager implements X509TrustManager {

@@ -45,7 +45,7 @@ import javax.swing.filechooser.*;
  *
  *     JFileChooser chooser = new JFileChooser();
  *     XTFRFileFilter filter = new XTFRFileFilter(
- *                   new String{"gif", "jpg"}, "JPEG & GIF Images")
+ *                   new String{"gif", "jpg"}, "JPEG &amp; GIF Images")
  *     chooser.addChoosableFileFilter(filter);
  *     chooser.showOpenDialog(this);
  *
@@ -138,8 +138,8 @@ public class XTFRFileFilter extends FileFilter {
    *
    * Files that begin with "." are ignored.
    *
-   * @see #getExtension
-   * @see FileFilter#accepts
+   * @param f a file
+   * @return flag
    */
    public boolean accept(File f) {
       if(f != null) {

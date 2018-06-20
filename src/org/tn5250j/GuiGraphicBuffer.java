@@ -1307,6 +1307,7 @@ public class GuiGraphicBuffer implements ScreenOIAListener,
 	/**
 	 * Returns a pointer to the graphics area that we can write on
 	 * 
+	 * @param font a font to use
 	 * @return a pointer
 	 */
 	public Graphics2D getWritingArea(Font font) {

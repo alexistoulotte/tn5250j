@@ -1,5 +1,4 @@
 /*
- * @(#)TabClosedListener.java
  * @author Kenneth J. Pouncey
  * Copyright: Copyright (c) 2001
  *
@@ -24,7 +23,7 @@ public interface TabClosedListener {
    /**
     * Will be called, when a tab should be closed.
     *
-    * @param tabToBeClosed
+    * @param tabToBeClosed number of the tab to be closed
     */
    public void onTabClosed(int tabToBeClosed);
 

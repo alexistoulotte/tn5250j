@@ -1544,7 +1544,6 @@ public class GUIGraphicsUtils {
 	}
 
 	/**
-	 * @see {@link #getClosedLockIcon()}
 	 * @return an image that lock like a opened lock
 	 */
 	public static ImageIcon getOpenLockIcon() {
@@ -1555,7 +1554,6 @@ public class GUIGraphicsUtils {
 	}
 
 	/**
-	 * @see {@link #getOpenLockIcon()}
 	 * @return an image that lock like a closed lock
 	 */
 	public static ImageIcon getClosedLockIcon() {

@@ -190,7 +190,6 @@ public class ENHGridLayout extends GridLayout {
     * based on the user's settings, retrieves row height and column
     * width information, then moves all the children to the appropriate places.
     * @param parent the specified component being laid out
-    * @see #reshape
     */
    public void layoutContainer(Container parent) {
       int ncomponents = parent.getComponentCount();

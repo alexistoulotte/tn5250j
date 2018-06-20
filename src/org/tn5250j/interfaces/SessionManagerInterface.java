@@ -29,7 +29,7 @@ import org.tn5250j.framework.common.Sessions;
 public interface SessionManagerInterface {
 
 	/**
-	 * @return
+	 * @return sessions
 	 */
 	public abstract Sessions getSessions();
 
@@ -39,10 +39,10 @@ public interface SessionManagerInterface {
 	public abstract void closeSession(SessionPanel sessionObject);
 
 	/**
-	 * @param props
-	 * @param configurationResource
-	 * @param sessionName
-	 * @return
+	 * @param props properties
+	 * @param configurationResource a configuration
+	 * @param sessionName a session name
+	 * @return 5250 session object
 	 */
 	public abstract Session5250 openSession(Properties props, String configurationResource, String sessionName);
 

@@ -34,21 +34,21 @@ public class Tn5250jSession {
 		session=ses;
 	}
 	/**
-	 * @return
+	 * @return session object
 	 */
 	public SessionPanel getSession() {
 		return session;
 	}
 
 	/**
-	 * @return
+	 * @return screen object
 	 */
 	public Screen5250 getSessionScreen() {
 		return sessionScreen;
 	}
 
 	/**
-	 * @return
+	 * @return telnet object
 	 */
 	public tnvt getSessionTNVT() {
 		return SessionTNVT;

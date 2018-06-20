@@ -193,7 +193,7 @@ public class Screen5250 {
 
 	/**
 	 * Copy and Paste support
-	 * @param a rectangle area
+	 * @param area a rectangle area
 	 * @return a string, holding the text
 	 */
 	public final String copyText(Rect area) {
@@ -317,10 +317,10 @@ public class Screen5250 {
 	}
 
 	/**
-	 * Copy & Paste support
+	 * Copy and Paste support
 	 *
-	 * @param position
-	 * @return
+	 * @param position start number
+	 * @return a copied text
 	 */
 	public final String copyTextField(int position) {
 		screenFields.saveCurrentField();
@@ -332,6 +332,7 @@ public class Screen5250 {
 
 	/**
 	 * @param formatOption formatting option to use
+	 * @param area a rect angle
 	 * @return vector string of numberic values
 	 */
 	public final Vector<Double> sumThem(boolean formatOption, Rect area) {
@@ -412,7 +413,8 @@ public class Screen5250 {
 	 * will leave them here for now until we work out the interaction.  This
 	 * should be up to the gui frontend in my opinion.
 	 *
-	 * @param pos
+	 * @param pos a position to move to
+	 * @return flag
 	 */
 	public boolean moveCursor(int pos) {
 
@@ -554,7 +556,7 @@ public class Screen5250 {
 	/**
 	 * Activate the cursor on screen
 	 *
-	 * @param activate
+	 * @param activate a flag
 	 */
 	public void setCursorActive(boolean activate) {
 		if (cursorActive && !activate) {
@@ -1714,9 +1716,9 @@ public class Screen5250 {
 	/**
 	 * This routine is 0 based offset. So to get row 20,1 then pass row 19,0
 	 *
-	 * @param row
-	 * @param col
-	 * @return
+	 * @param row number of the row
+	 * @param col number of the column 
+	 * @return number of the position
 	 */
 	public int getPos(int row, int col) {
 
@@ -1727,7 +1729,7 @@ public class Screen5250 {
 	 * Current position is based on offsets of 1,1 not 0,0 of the current
 	 * position of the screen
 	 *
-	 * @return int
+	 * @return int the current position
 	 */
 	public int getCurrentPos() {
 
@@ -1874,8 +1876,8 @@ public class Screen5250 {
 	 * or not. If it is then the chgToField parameter will change the current
 	 * field to this field where the position indicates
 	 *
-	 * @param pos
-	 * @param chgToField
+	 * @param pos number
+	 * @param chgToField flag
 	 * @return true or false
 	 */
 	public boolean isInField(int pos, boolean chgToField) {
@@ -1902,8 +1904,8 @@ public class Screen5250 {
 	 * passed is in a field or not. If it is then the field at this position
 	 * becomes the current working field.
 	 *
-	 * @param row
-	 * @param col
+	 * @param row number of the row
+	 * @param col number of the column
 	 * @return true or false
 	 */
 	public boolean isInField(int row, int col) {
@@ -1918,9 +1920,9 @@ public class Screen5250 {
 	 * change the current field to this field where the row and column
 	 * indicates.
 	 *
-	 * @param row
-	 * @param col
-	 * @param chgToField
+	 * @param row number of the row
+	 * @param col number of the column
+	 * @param chgToField flag
 	 * @return true or false
 	 */
 	public boolean isInField(int row, int col, boolean chgToField) {
@@ -2099,9 +2101,9 @@ public class Screen5250 {
 	 *  extra position for the terminating null character.
 	 *  <p>
 	 *
-	 * @param buffer
-	 * @param bufferLength
-	 * @param plane
+	 * @param buffer character buffer
+	 * @param bufferLength length
+	 * @param plane plane
 	 * @return The number of characters copied to the buffer
 	 */
 	public synchronized int GetScreen(char buffer[], int bufferLength, int plane) {
@@ -2124,11 +2126,11 @@ public class Screen5250 {
 	 * the buffer must include one extra position for the terminating null character.
 	 * </p>
 	 *
-	 * @param buffer
-	 * @param bufferLength
-	 * @param from
-	 * @param length
-	 * @param plane
+	 * @param buffer buffer
+	 * @param bufferLength length
+	 * @param from where to begin
+	 * @param length length
+	 * @param plane plane
 	 * @return The number of characters copied to the buffer
 	 */
 	public synchronized int GetScreen(char buffer[], int bufferLength, int from, int length, int plane)	{
@@ -2152,12 +2154,12 @@ public class Screen5250 {
 	 *  character.
 	 *  </p>
 	 *
-	 * @param buffer
-	 * @param bufferLength
-	 * @param row
-	 * @param col
-	 * @param length
-	 * @param plane
+	 * @param buffer buffer
+	 * @param bufferLength length
+	 * @param row number of row
+	 * @param col number of column
+	 * @param length length
+	 * @param plane plane
 	 * @return The number of characters copied to the buffer.
 	 */
 	public synchronized int GetScreen(char buffer[], int bufferLength, int row,	int col, int length, int plane)	{
@@ -2188,11 +2190,11 @@ public class Screen5250 {
 	 * the number of characters copied.
 	 * </p>
 	 *
-	 * @param buffer
-	 * @param bufferLength
-	 * @param startPos
-	 * @param endPos
-	 * @param plane
+	 * @param buffer nuffer
+	 * @param bufferLength length
+	 * @param startPos where to start
+	 * @param endPos where to end
+	 * @param plane plane
 	 * @return The number of characters copied to the buffer
 	 */
 	public synchronized int GetScreenRect(char buffer[], int bufferLength, int startPos, int endPos, int plane) {
@@ -2222,13 +2224,13 @@ public class Screen5250 {
 	 * the number of characters copied.
 	 * </p>
 	 *
-	 * @param buffer
-	 * @param bufferLength
-	 * @param startRow
-	 * @param startCol
-	 * @param endRow
-	 * @param endCol
-	 * @param plane
+	 * @param buffer buffer
+	 * @param bufferLength length
+	 * @param startRow row to start
+	 * @param startCol column to start
+	 * @param endRow row to end
+	 * @param endCol column to end
+	 * @param plane plane
 	 * @return The number characters copied to the buffer
 	 */
 	public synchronized int GetScreenRect(char buffer[], int bufferLength,
@@ -2281,8 +2283,8 @@ public class Screen5250 {
 	 * 0,0 and call the goto_XY(int pos) it is mostly used from external classes
 	 * that use the 1,1 offset
 	 *
-	 * @param row
-	 * @param col
+	 * @param row number of row
+	 * @param col number of column
 	 */
 	public void setCursor(int row, int col) {
 		goto_XY(((row - 1) * numCols) + (col - 1));
@@ -2325,7 +2327,7 @@ public class Screen5250 {
 	 * Convenience method to set the field object passed as the currect working
 	 * screen field
 	 *
-	 * @param screenField
+	 * @param screenField a screen field object
 	 * @return true or false whether it was sucessful
 	 */
 	protected boolean gotoField(ScreenField screenField) {
@@ -2419,24 +2421,6 @@ public class Screen5250 {
 
 	}
 
-	/**
-	 * Creates a window on the screen
-	 *
-	 * @param depth
-	 * @param width
-	 * @param type
-	 * @param gui
-	 * @param monoAttr
-	 * @param colorAttr
-	 * @param ul
-	 * @param upper
-	 * @param ur
-	 * @param left
-	 * @param right
-	 * @param ll
-	 * @param bottom
-	 * @param lr
-	 */
 	protected void createWindow(int depth, int width, int type, boolean gui,
 			int monoAttr, int colorAttr, int ul, int upper, int ur, int left,
 			int right, int ll, int bottom, int lr) {
@@ -2590,11 +2574,11 @@ public class Screen5250 {
 	 *
 	 * @param flag -
 	 *            type to draw - vertical or horizontal
-	 * @param totalRowScrollable
-	 * @param totalColScrollable
-	 * @param sliderRowPos
-	 * @param sliderColPos
-	 * @param sbSize
+	 * @param totalRowScrollable number
+	 * @param totalColScrollable number
+	 * @param sliderRowPos number
+	 * @param sliderColPos number
+	 * @param sbSize number
 	 */
 	protected void createScrollBar(int flag, int totalRowScrollable,
 			int totalColScrollable, int sliderRowPos, int sliderColPos,
@@ -2634,17 +2618,6 @@ public class Screen5250 {
 		planes.setUseGUI(sp, BUTTON_SB_DN);
 	}
 
-	/**
-	 * Write the title of the window that is on the screen
-	 *
-	 * @param pos
-	 * @param depth
-	 * @param width
-	 * @param orientation
-	 * @param monoAttr
-	 * @param colorAttr
-	 * @param title
-	 */
 	protected void writeWindowTitle(int pos, int depth, int width,
 			byte orientation, int monoAttr, int colorAttr, StringBuffer title) {
 
@@ -2692,9 +2665,9 @@ public class Screen5250 {
 	 * roll. Byte 3: Bits 0-7 Line number defining the bottom line of the area
 	 * that will participate in the roll.
 	 *
-	 * @param direction
-	 * @param topLine
-	 * @param bottomLine
+	 * @param direction direction
+	 * @param topLine number of top line
+	 * @param bottomLine number of bottom line
 	 */
 	protected void rollScreen(int direction, int topLine, int bottomLine) {
 
@@ -3108,7 +3081,7 @@ public class Screen5250 {
 	 * If the position change is over the last row and column of the screen then
 	 * cursor is moved to first position of the screen.
 	 *
-	 * @param i
+	 * @param i position
 	 */
 	protected void changePos(int i) {
 
@@ -3164,7 +3137,7 @@ public class Screen5250 {
 	/**
 	 * Set the error line number to that of number passed.
 	 *
-	 * @param line
+	 * @param line number of the line
 	 */
 	protected void setErrorLine(int line) {
 
@@ -3191,7 +3164,6 @@ public class Screen5250 {
 	/**
 	 * Restores the error line characters from the save buffer.
 	 *
-	 * @see #saveErrorLine()
 	 */
 	protected void restoreErrorLine() {
 

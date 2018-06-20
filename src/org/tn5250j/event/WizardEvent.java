@@ -77,7 +77,7 @@ protected Component currentPage;
 
    /**
     * Sets the next page.
-    * @param component
+    * @param p component
     */
    public void setNewPage(Component p) {
       newPage = p;

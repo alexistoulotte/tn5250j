@@ -39,7 +39,7 @@ public class Rect {
 	/* default */ int width;
 
 	/**
-	 * @param rect
+	 * @param rect a rect angle
 	 */
 	public void setBounds(Rect rect) {
 		setBounds(rect.x, rect.y, rect.width, rect.height);

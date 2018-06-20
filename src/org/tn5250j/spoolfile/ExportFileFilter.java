@@ -110,8 +110,6 @@ public class ExportFileFilter extends FileFilter {
    *
    * Files that begin with "." are ignored.
    *
-   * @see #getExtension
-   * @see FileFilter#accepts
    */
    public boolean accept(File f) {
       if(f != null) {

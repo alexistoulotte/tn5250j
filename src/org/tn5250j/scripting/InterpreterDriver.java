@@ -15,7 +15,8 @@ import org.tn5250j.SessionPanel;
 public interface InterpreterDriver  {
    /**
     * Execute a script string.
-    * @param script a string to be interpreted
+    * @param session a session object
+    * @param script script a string to be interpreted
     * @exception throw a InterpreterDriver.InterpreterException
     *            which wraps the exception throw by underlying
     *            interpreter
@@ -25,7 +26,8 @@ public interface InterpreterDriver  {
 
    /**
     * Execute a script file.
-    * @param script a name of file to be interpreted
+    * @param session a session object
+    * @param scriptFile script a name of file to be interpreted
     * @exception throw a InterpreterDriver.InterpreterException
     *            which wraps the exception throw by underlying
     *            interpreter
@@ -35,7 +37,7 @@ public interface InterpreterDriver  {
 
    /**
     * Execute a script file.
-    * @param script a name of file to be interpreted
+    * @param scriptFile a name of file to be interpreted
     * @exception throw a InterpreterDriver.InterpreterException
     *            which wraps the exception throw by underlying
     *            interpreter

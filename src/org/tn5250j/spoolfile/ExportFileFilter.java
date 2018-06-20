@@ -63,7 +63,8 @@ public class ExportFileFilter extends FileFilter {
    * Note that the "." before the extension is not needed. If
    * provided, it will be ignored.
    *
-   * @see #addExtension
+   * @param extension an extension name
+   * @param description a desription
    */
    public ExportFileFilter(String extension, String description) {
       this();
@@ -80,7 +81,7 @@ public class ExportFileFilter extends FileFilter {
    * Note that the "." before the extension is not needed adn
    * will be ignored.
    *
-   * @see #addExtension
+   * @param filters some filter
    */
    public ExportFileFilter(String[] filters) {
       this(filters, null);
@@ -92,7 +93,8 @@ public class ExportFileFilter extends FileFilter {
    *
    * Note that the "." before the extension is not needed and will be ignored.
    *
-   * @see #addExtension
+   * @param filters some filter
+   * @param description a description
    */
    public ExportFileFilter(String[] filters, String description) {
       this();
@@ -127,8 +129,8 @@ public class ExportFileFilter extends FileFilter {
    /**
    * Return the extension portion of the file's name .
    *
-   * @see #getExtension
-   * @see FileFilter#accept
+   * @param f file
+   * @return string
    */
    public String getExtension(File f) {
       if(f != null) {
@@ -159,6 +161,8 @@ public class ExportFileFilter extends FileFilter {
    *   filter.addExtension("tif");
    *
    * Note that the "." before the extension is not needed and will be ignored.
+   * 
+   * @param extension an extension
    */
    public void addExtension(String extension) {
       if(filters == null) {
@@ -173,10 +177,7 @@ public class ExportFileFilter extends FileFilter {
    * Returns the human readable description of this filter. For
    * example: "JPEG and GIF Image Files (*.jpg, *.gif)"
    *
-   * @see setDescription
-   * @see setExtensionListInDescription
-   * @see isExtensionListInDescription
-   * @see FileFilter#getDescription
+   * @return string
    */
    public String getDescription() {
       if(fullDescription == null) {
@@ -202,9 +203,7 @@ public class ExportFileFilter extends FileFilter {
    * Sets the human readable description of this filter. For
    * example: filter.setDescription("Gif and JPG Images");
    *
-   * @see setDescription
-   * @see setExtensionListInDescription
-   * @see isExtensionListInDescription
+   * @param description a description
    */
    public void setDescription(String description) {
       this.description = description;
@@ -218,9 +217,7 @@ public class ExportFileFilter extends FileFilter {
    * Only relevent if a description was provided in the constructor
    * or using setDescription();
    *
-   * @see getDescription
-   * @see setDescription
-   * @see isExtensionListInDescription
+   * @param b flag
    */
    public void setExtensionListInDescription(boolean b) {
       useExtensionsInDescription = b;
@@ -234,9 +231,7 @@ public class ExportFileFilter extends FileFilter {
    * Only relevent if a description was provided in the constructor
    * or using setDescription();
    *
-   * @see getDescription
-   * @see setDescription
-   * @see setExtensionListInDescription
+   * @return flag
    */
    public boolean isExtensionListInDescription() {
       return useExtensionsInDescription;
@@ -245,6 +240,9 @@ public class ExportFileFilter extends FileFilter {
    /**
     * Set the extension to be used for this type if one is not provided
     *    This will append the first key of the filter contained in the list
+    *    
+    * @param f file
+    * @return string
     */
    public String setExtension(File f) {
 

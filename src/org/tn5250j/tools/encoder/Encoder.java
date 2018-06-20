@@ -35,6 +35,11 @@ import java.io.IOException;
 public interface Encoder {
    /**
     * Encode the specified component on the specified stream
+    * 
+    * @param component component
+    * @param stream an outputstream
+    * @throws IOException an exception
+    * @throws EncoderException an encoder exception
     */
    public void encode(Component component, OutputStream stream) throws IOException, EncoderException;
 

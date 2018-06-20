@@ -85,6 +85,9 @@ public class AS400Xtfr {
 
    /**
     * Set up ftp sockets and connect to an as400
+    * 
+    * @param host a hostname
+    * @return flag
     */
    public boolean connect(String host) {
 
@@ -158,6 +161,8 @@ public class AS400Xtfr {
 
    /**
     * returns whether or not the system is connected to an AS400 or not
+    * 
+    * @return flag
     */
    public boolean isConnected() {
 
@@ -244,6 +249,7 @@ public class AS400Xtfr {
     *
     * @param user  The user name
     * @param passWord  The password of the user
+    * @return flag
     */
    public boolean login(String user, String passWord) {
 
@@ -258,7 +264,9 @@ public class AS400Xtfr {
 
    /**
     * Returns whether a field is selected for output or not
-    *
+    * 
+    * @param which number of the field to check
+    * @return flag
     */
    public boolean isFieldSelected(int which) {
 
@@ -295,6 +303,8 @@ public class AS400Xtfr {
 
    /**
     * Returns whether there are any fields selected or not
+    * 
+    * @return flag
     */
    public boolean isFieldsSelected() {
 
@@ -309,6 +319,9 @@ public class AS400Xtfr {
 
    /**
     * Convenience method to select or unselect a field for output
+    * 
+    * @param which number
+    * @param value flag
     */
    public void setFieldSelected(int which,boolean value) {
 
@@ -319,6 +332,9 @@ public class AS400Xtfr {
 
    /**
     * Convenience method to return the name of a field
+    * 
+    * @param which number
+    * @return string
     */
    public String getFieldName(int which) {
 
@@ -330,6 +346,8 @@ public class AS400Xtfr {
    /**
     * Returns the number of fields in the File Field Definition array of fields
     * returned from the DSPFFD command
+    * 
+    * @return number
     */
    public int getNumberOfFields() {
 
@@ -338,6 +356,12 @@ public class AS400Xtfr {
 
    /**
     * Transfer the file information to an output file
+    * 
+    * @param remoteFile file
+    * @param localFile file
+    * @param statement some text
+    * @param useInternal flag
+    * @return flag
     */
    public boolean getFile(String remoteFile, String localFile, String statement,
                            boolean useInternal) {
@@ -668,6 +692,8 @@ public class AS400Xtfr {
 
    /**
     * Print ftp command events and responses
+    * 
+    * @param msgText text
     */
    private void printFTPInfo(String msgText) {
 
@@ -678,6 +704,9 @@ public class AS400Xtfr {
 
    /**
     * Write the html header of the output file
+    * 
+    * @param fileName file name
+    * @throws FileNotFoundException an exception
     */
    private void writeHeader(String fileName) throws
                            FileNotFoundException {

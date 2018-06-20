@@ -35,6 +35,10 @@ public class As400Util {
 
 	/**
 	 * Convert an as400 packed field to an integer
+	 * @param cByte bytes
+	 * @param startOffset offset
+	 * @param length number
+	 * @return number
 	 */
 	public static final int packed2int(final byte[] cByte, final int startOffset, final int length) {
 

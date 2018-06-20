@@ -38,7 +38,7 @@ public enum ColumnSeparator {
   /**
    * searches the enumeration for the given name, case insensitive
    *
-   * @param name
+   * @param name name
    * @return the corresponding enum value OR default value, if name not matches
    */
   public static ColumnSeparator getFromName(String name) {

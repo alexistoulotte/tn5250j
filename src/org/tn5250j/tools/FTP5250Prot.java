@@ -99,8 +99,13 @@ public class FTP5250Prot {
    public void setDecimalChar(char dec) {
       decChar = dec;
    }
+   
    /**
     * Set up ftp sockets and connect to an as400
+    * 
+    * @param host a hostname
+    * @param port a port to connect to
+    * @return flag
     */
    public boolean connect(String host, int port) {
 
@@ -148,6 +153,8 @@ public class FTP5250Prot {
 
    /**
     * returns whether or not the system is connected to an AS400 or not
+    * 
+    * @return flag
     */
    public boolean isConnected() {
 
@@ -233,7 +240,8 @@ public class FTP5250Prot {
     * Send the user id and password to the connected host
     *
     * @param user  The user name
-    * @param password  The password of the user
+    * @param passWord  The password of the user
+    * @return flag
     */
    public boolean login(String user, String passWord) {
 
@@ -300,6 +308,8 @@ public class FTP5250Prot {
 
    /**
     * Checks whether the remote system is an OS400 or not
+    * 
+    * @return flag
     */
    private boolean isConnectedToOS400 () {
 
@@ -314,6 +324,8 @@ public class FTP5250Prot {
    /**
     * Returns whether a field is selected for output or not
     *
+    * @param which number of field
+    * @return flag
     */
    public boolean isFieldSelected(int which) {
 
@@ -350,6 +362,8 @@ public class FTP5250Prot {
 
    /**
     * Returns whether there are any fields selected or not
+    * 
+    * @return flag
     */
    public boolean isFieldsSelected() {
 
@@ -364,6 +378,9 @@ public class FTP5250Prot {
 
    /**
     * Convenience method to select or unselect a field for output
+    * 
+    * @param which field number
+    * @param value flag
     */
    public void setFieldSelected(int which,boolean value) {
 
@@ -374,6 +391,9 @@ public class FTP5250Prot {
 
    /**
     * Convenience method to return the name of a field
+    * 
+    * @param which field number
+    * @return string
     */
    public String getFieldName(int which) {
 
@@ -385,6 +405,8 @@ public class FTP5250Prot {
    /**
     * Returns the number of fields in the File Field Definition array of fields
     * returned from the DSPFFD command
+    * 
+    * @return number
     */
    public int getNumberOfFields() {
 
@@ -408,6 +430,9 @@ public class FTP5250Prot {
 
    /**
     * Creates a passive socket to the remote host to allow the transfer of data
+    * 
+    * @param cmd command
+    * @return socket object
     *
     */
    private Socket createPassiveSocket(String cmd) {
@@ -467,6 +492,10 @@ public class FTP5250Prot {
    /**
     * Retrieves the File Field Definitions and Member information for the remote
     *    file to be transferred
+    *    
+    * @param tFile file
+    * @param useInternal flag
+    * @return flag
     */
    protected boolean getFileInfo(String tFile, boolean useInternal) {
 
@@ -517,6 +546,9 @@ public class FTP5250Prot {
    /**
     * Loads the File Field Definition array with the field information of the
     * remote file
+    * 
+    * @param useInternal flag
+    * @return flag
     */
    private boolean loadFFD(boolean useInternal) {
 
@@ -661,6 +693,10 @@ public class FTP5250Prot {
 
    /**
     * Executes the command to obtain the member information of the remote file
+    * 
+    * @param file file
+    * @param member member
+    * @return flag
     */
    protected boolean getMbrInfo(String file, String member) {
 
@@ -683,6 +719,9 @@ public class FTP5250Prot {
    /**
     * Parses the information obtained by the DSPFD command to obtain the size of
     * the remote file and member.
+    * 
+    * @param memeber member
+    * @return flag
     */
    private boolean getMbrSize(String member) {
 
@@ -772,6 +811,9 @@ public class FTP5250Prot {
    /**
     * Convenience method to return the file name and member that is being
     *    transferred
+    *    
+    * @param tFile file
+    * @return string
     */
    public String getFullFileName(String tFile) {
 
@@ -820,6 +862,8 @@ public class FTP5250Prot {
    /**
     * Convenience method to return the file size of the file and member that is
     * being transferred
+    * 
+    * @return size
     */
    public int getFileSize() {
 
@@ -830,6 +874,8 @@ public class FTP5250Prot {
     * Print output of the help command
     *
     *    Not used just a test method for me
+    *    
+    * @return flag
     */
    protected boolean printHelp() {
 
@@ -839,6 +885,10 @@ public class FTP5250Prot {
 
    /**
     * Transfer the file information to an output file
+    * 
+    * @param remoteFile file
+    * @param localFile file
+    * @return flag
     */
    protected boolean getFile(String remoteFile, String localFile) {
 
@@ -949,6 +999,9 @@ public class FTP5250Prot {
    /**
     * Parse the field field definition of the data and return a string buffer of
     * the output to be written
+    * 
+    * @param cByte bytes
+    * @param rb string
     */
    private void parseFFD(byte[] cByte,StringBuffer rb) {
 
@@ -965,6 +1018,8 @@ public class FTP5250Prot {
 
    /**
     * Print ftp command events and responses
+    * 
+    * @param msgText some text
     */
    private void printFTPInfo(String msgText) {
 
@@ -975,14 +1030,19 @@ public class FTP5250Prot {
 
    /**
     * Execute the command without parameters on the remote ftp host
+    * 
+    * @param cmd command
     */
-
    private int executeCommand(String cmd) {
       return executeCommand(cmd, null);
    }
 
    /**
     * Execute a command with parameters on the remote ftp host
+    * 
+    * @param cmd command
+    * @param params parameters
+    * @return number with return code
     */
    private int executeCommand(String cmd, String params) {
 
@@ -1013,6 +1073,8 @@ public class FTP5250Prot {
    /**
     * Parse the response returned from the remote host to be used for success
     * or failure of a command
+    * 
+    * @return string
     */
    private String parseResponse() {
       try {
@@ -1068,6 +1130,9 @@ public class FTP5250Prot {
 
    /**
     * Write the html header of the output file
+    * 
+    * @param fileName file
+    * @throws FileNotFoundException an exception
     */
    private void writeHeader(String fileName) throws
                            FileNotFoundException {

@@ -45,8 +45,8 @@ public class SendScreenToFile {
 			.getLogger(SendScreenToFile.class);
 
 	/**
-	 * @param parent
-	 * @param screen
+	 * @param parent component
+	 * @param screen 5250 screen object
 	 */
 	public static final void showDialog(Component parent, Screen5250 screen) {
 		String workingDir = System.getProperty("user.dir");

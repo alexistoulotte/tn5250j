@@ -69,7 +69,8 @@ protected Hashtable alignment;
 
    /**
     * Gets the vertical position of a label relative to its control.
-    * @see #setLabelVerticalAlignment
+    * @param child component
+    * @return number
     */
    public int getLabelVerticalAlignment(Component child) {
       return get(alignment, child, MIDDLE);
@@ -77,6 +78,7 @@ protected Hashtable alignment;
 
    /**
     * Sets the vertical position of a label relative to its control.
+    * @param child component
     * @param align TOP, MIDDLE (default), or BOTTOM.
     * @exception IllegalArgumentException If an invalid value is set
     */
@@ -86,7 +88,9 @@ protected Hashtable alignment;
    }
 
    /** Gets the component's RezizeWidth value.
-    * @see #setResizeWidth
+    * 
+    * @param child component
+    * @return flag
     */
    public boolean getResizeWidth(Component child) {
       return get(resize_width, child, false);
@@ -94,6 +98,9 @@ protected Hashtable alignment;
 
    /** Sets whether the control should be resized horizontally to its parent's
     * right edge if it is in the last column (default: false).
+    * 
+    * @param child component
+    * @param v flag
     */
    public void setResizeWidth(Component child, boolean v) {
       if (resize_width == null) resize_width = new Hashtable(5);
@@ -101,7 +108,9 @@ protected Hashtable alignment;
    }
 
    /** Gets the component's RezizeHeight value.
-    * @see #setResizeHeight
+    * 
+    * @param child component
+    * @return flag
     */
    public boolean getResizeHeight(Component child) {
       return get(resize_height, child, false);
@@ -110,6 +119,9 @@ protected Hashtable alignment;
    /** Sets whether the control should be resized vertically to the height of the
     * largest component in its row (default: false). This value is ignored for
     * labels (the components in odd columns).
+    * 
+    * @param child component
+    * @param v flag
     */
    public void setResizeHeight(Component child, boolean v) {
       if (resize_height == null) resize_height = new Hashtable(5);
@@ -118,11 +130,6 @@ protected Hashtable alignment;
 
    protected boolean isLabel(int col) { return (col % 2) == 0; }
 
-   /**
-    * Positions the component.
-    * @param pos the component's index in its parents child list
-    * @param row,col component's position
-    */
    protected void setBounds(int pos, int row, int col, Component comp,
                      int x, int y, int col_width, int row_height) {
 

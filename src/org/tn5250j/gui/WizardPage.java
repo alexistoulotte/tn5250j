@@ -206,6 +206,8 @@ static public final int NO_BUTTONS = 0x00;
    /**
     * Overrides normal getContentPane to provide specially
     * managed area
+    * 
+    * @return container object
     */
    public Container getContentPane() {
       return contentPane;

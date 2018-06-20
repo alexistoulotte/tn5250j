@@ -37,91 +37,90 @@ public interface TN5250jLogger {
 	public static final int OFF   = 32;  // most silence
 
 	/**
-	 * @param clazz
+	 * @param clazz a class name
 	 */
 	abstract public void initialize(final String clazz);
 
 	/**
-	 * @param message
+	 * @param message a message object
 	 */
 	abstract public void debug(Object message);
 
 	/**
-	 * @param message
-	 * @param throwable
+	 * @param message a message object
+	 * @param throwable a throwable
 	 */
 	abstract public void debug(Object message, Throwable throwable);
 
 	abstract public void info(Object message);
 
 	/**
-	 * @param message
-	 * @param throwable
+	 * @param message a message object
+	 * @param throwable a throwable
 	 */
 	abstract public void info(Object message, Throwable throwable);
 
 	/**
-	 * @param message
+	 * @param message a message object
 	 */
 	abstract public void warn(Object message);
 
 	/**
-	 * @param message
-	 * @param throwable
+	 * @param message message object
+	 * @param throwable a throwable object
 	 */
 	abstract public void warn(Object message, Throwable throwable);
 
 	/**
-	 * @param message
+	 * @param message a message object
 	 */
 	abstract public void error(Object message);
 
 	/**
-	 * @param message
-	 * @param throwable
+	 * @param message a message object
+	 * @param throwable a throwable object
 	 */
 	abstract public void error(Object message, Throwable throwable);
 
 	/**
-	 * @param message
+	 * @param message a message object
 	 */
 	abstract public void fatal(Object message);
 
 	/**
-	 * @param message
-	 * @param throwable
+	 * @param message a message object
+	 * @param throwable a throwable object
 	 */
 	abstract public void fatal(Object message, Throwable throwable);
 
 	/**
-	 * @return
+	 * @return flag
 	 */
 	abstract public boolean isDebugEnabled();
 
 	/**
-	 * @return
+	 * @return flag
 	 */
 	abstract public boolean isInfoEnabled();
 
 	/**
-	 * @return
+	 * @return flag
 	 */
 	abstract public boolean isWarnEnabled();
 
 	/**
-	 * @return
+	 * @return flag
 	 */
 	abstract public boolean isErrorEnabled();
 
 	/**
-	 * @return
+	 * @return flag
 	 */
 	abstract public boolean isFatalEnabled();
 
 	/**
 	 * Sets a new log level.
-	 * @param newLevel
-	 * @throws IllegalArgumentException If the new level is not allowed
+	 * @param newLevel level
 	 */
 	abstract public void setLevel(int newLevel);
 

@@ -79,6 +79,7 @@ public final class TN5250jLogFactory {
    }
 
    /**
+    * @param clazz a class
     * @return An instance of the TN5250jLogger.
     */
    public static TN5250jLogger getLogger (Class<?> clazz) {
@@ -86,6 +87,7 @@ public final class TN5250jLogFactory {
    }
 
    /**
+    * @param clazzName a classname
     * @return An instance of the TN5250jLogger.
     */
    public static TN5250jLogger getLogger (String clazzName) {

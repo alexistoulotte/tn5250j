@@ -158,7 +158,7 @@ public class Wizard extends JPanel {
    /**
     * Move to the previous page
     * 
-    * @param flag
+    * @return flag
     */
    public boolean previous() {
       boolean is_last_page = false;

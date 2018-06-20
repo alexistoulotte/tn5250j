@@ -172,11 +172,6 @@ public class ENHGridLayout extends GridLayout {
                       + (row_heights.length+1)*vgap);
    }
 
-   /**
-    * Positions the component.
-    * @param pos the component's index in its parents child list
-    * @param row,col component's position
-    */
    protected void setBounds(int pos, int row, int col,
                      Component comp, int x, int y, int w, int h) {
 

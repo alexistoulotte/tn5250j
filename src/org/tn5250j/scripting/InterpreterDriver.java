@@ -38,7 +38,7 @@ public interface InterpreterDriver  {
    /**
     * Execute a script file.
     * @param scriptFile a name of file to be interpreted
-    * @throws a InterpreterDriver.InterpreterException
+    * @throws InterpreterDriver.InterpreterException
     *            which wraps the exception throw by underlying
     *            interpreter
     */

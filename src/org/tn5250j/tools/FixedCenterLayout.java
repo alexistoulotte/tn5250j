@@ -54,6 +54,8 @@ public class FixedCenterLayout implements LayoutManager2, Serializable {
 
     /**
      * Constructs a layout with the specified gaps between components.
+     * 
+     * @param hgap number
      */
     public FixedCenterLayout(int hgap) {
         this.hgap = hgap;
@@ -61,6 +63,7 @@ public class FixedCenterLayout implements LayoutManager2, Serializable {
 
     /**
      * Returns the horizontal gap between components.
+     * @return numnber
      */
     public int getHgap() {
         return hgap;
@@ -68,6 +71,8 @@ public class FixedCenterLayout implements LayoutManager2, Serializable {
 
     /**
      * Sets the horizontal gap between components.
+     * 
+     * @param hgap number
      */
     public void setHgap(int hgap) {
         this.hgap = hgap;
@@ -75,6 +80,9 @@ public class FixedCenterLayout implements LayoutManager2, Serializable {
 
     /**
      * Adds the specified component to the layout.
+     * 
+     * @param comp component
+     * @param constraints object
      */
     public void addLayoutComponent(Component comp, Object constraints) {
         synchronized (comp.getTreeLock()) {
@@ -88,6 +96,9 @@ public class FixedCenterLayout implements LayoutManager2, Serializable {
 
     /**
      * We are forced to support it by <code>LayoutManager</code>.
+     * 
+     * @param name string
+     * @param comp component
      */
     public void addLayoutComponent(String name, Component comp) {
         synchronized (comp.getTreeLock()) {
@@ -105,6 +116,8 @@ public class FixedCenterLayout implements LayoutManager2, Serializable {
 
     /**
      * Removes the specified component from this layout.
+     * 
+     * @param component component
      */
     public void removeLayoutComponent(Component component) {
         synchronized (component.getTreeLock()) {
@@ -120,6 +133,9 @@ public class FixedCenterLayout implements LayoutManager2, Serializable {
 
     /**
      * Determines the minimum size of the target.
+     * 
+     * @param target container
+     * @return dimension
      */
     public Dimension minimumLayoutSize(Container target) {
         synchronized (target.getTreeLock()) {
@@ -139,6 +155,9 @@ public class FixedCenterLayout implements LayoutManager2, Serializable {
 
     /**
      * Determines the preferred size of the target.
+     * 
+     * @param target container
+     * @return dimension
      */
     public Dimension preferredLayoutSize(Container target) {
         synchronized (target.getTreeLock()) {
@@ -158,6 +177,9 @@ public class FixedCenterLayout implements LayoutManager2, Serializable {
 
     /**
      * Determines the maximum size of the target.
+     * 
+     * @param target container
+     * @return dimension
      */
     public Dimension maximumLayoutSize(Container target) {
         return new Dimension(Integer.MAX_VALUE, Integer.MAX_VALUE);
@@ -165,6 +187,9 @@ public class FixedCenterLayout implements LayoutManager2, Serializable {
 
     /**
      * Returns the alignment along the x axis.
+     * 
+     * @param parent container
+     * @return float
      */
     public float getLayoutAlignmentX(Container parent) {
         return 0.5f;
@@ -172,6 +197,9 @@ public class FixedCenterLayout implements LayoutManager2, Serializable {
 
     /**
      * Returns the alignment along the y axis.
+     * 
+     * @param parent container
+     * @return float
      */
     public float getLayoutAlignmentY(Container parent) {
         return 0.5f;
@@ -180,12 +208,16 @@ public class FixedCenterLayout implements LayoutManager2, Serializable {
     /**
      * Invalidates the layout, indicating that if the layout manager
      * has cached information it should be discarded.
+     * 
+     * @param target container
      */
     public void invalidateLayout(Container target) {
     }
 
     /**
      * Lays out the target argument using this layout.
+     * 
+     * @param target container
      */
     public void layoutContainer(Container target) {
         synchronized (target.getTreeLock()) {
@@ -234,6 +266,8 @@ public class FixedCenterLayout implements LayoutManager2, Serializable {
 
     /**
      * Returns a string representation of the state of this layout.
+     * 
+     * @return string
      */
     public String toString() {
         return getClass().getName() + "[hgap=" + hgap + "]";

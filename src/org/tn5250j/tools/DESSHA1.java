@@ -43,7 +43,7 @@ public class DESSHA1 implements Serializable {
 
 	/**
 	 * Creates a new <code>MessageDigest</code> instance.
-	 * @throws InstantiationException
+	 * @throws InstantiationException an exception
 	 */
 	public DESSHA1() throws InstantiationException {
 		try {
@@ -77,7 +77,7 @@ public class DESSHA1 implements Serializable {
 	 * internally by <code>digest()</code>. Data is returned in
 	 * the format specified by the Jabber protocol.
 	 *
-	 * @param data
+	 * @param data some bytes
 	 * @return String of our hex bytes
 	 */
 	public static String bytesToHex(byte[] data) {

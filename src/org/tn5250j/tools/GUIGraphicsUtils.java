@@ -1259,6 +1259,12 @@ public class GUIGraphicsUtils {
 	/** Draw a string with the graphics g at location (x,y) just like g.drawString() would.
 	 *  The first occurence of underlineChar in text will be underlined. The matching is
 	 *  not case sensitive.
+	 *  
+	 *  @param g graphics object
+	 *  @param text some text to draw
+	 *  @param underlinedChar number ov char to underline
+	 *  @param x x
+	 *  @param y y
 	 */
 	public static void drawString(Graphics g,String text,int underlinedChar,int x,int y) {
 
@@ -1506,6 +1512,7 @@ public class GUIGraphicsUtils {
 	/**
 	 * Checks to see if the font name exists within our environment
 	 *
+	 * @param fontString font to use
 	 * @return whether the font passed exists or not.
 	 */
 	public static boolean isFontNameExists(String fontString) {
@@ -1525,6 +1532,8 @@ public class GUIGraphicsUtils {
 	/**
 	 * This routine will extract image resources from jar file and create
 	 * an ImageIcon
+	 * 
+	 * @param image image to use
 	 */
 	public static ImageIcon createImageIcon (String image) {
 		URL file=null;

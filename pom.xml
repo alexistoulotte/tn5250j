@@ -7,6 +7,28 @@
 	<artifactId>tn5250j</artifactId>
 	<version>0.7.6.1</version>
 
+	<url>https://github.com/vebqa/tn5250j</url>
+	<name>TN5250j</name>
+	<description>Telnet 5250 java based emulator</description>
+	<scm>
+		<url>https://github.com/vebqa/tn5250j.git</url>
+	</scm>
+
+	<licenses>
+		<license>
+			<name>GNU General Public License v2.0</name>
+			<url>http://www.gnu.de/documents/gpl-2.0.de.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Karsten Doerges</name>
+			<email>kdoerges@googlemail.com</email>
+		</developer>
+	</developers>
+
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<testSourceDirectory>tests</testSourceDirectory>
@@ -190,6 +212,4 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	<url>https://github.com/vebqa/tn5250j</url>
-	<name>TN5250j</name>
 </project>

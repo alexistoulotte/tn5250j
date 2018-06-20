@@ -192,10 +192,9 @@ public class Screen5250 {
 	}
 
 	/**
-	 * Copy & Paste support
-	 *
-	 * @see {@link #pasteText(String, boolean)}
-	 * @see {@link #copyTextField(int)}
+	 * Copy and Paste support
+	 * @param a rectangle area
+	 * @return a string, holding the text
 	 */
 	public final String copyText(Rect area) {
 		StringBuilder sb = new StringBuilder();
@@ -229,10 +228,10 @@ public class Screen5250 {
 	}
 
 	/**
-	 * Copy & Paste support
+	 * Copy and Paste support
 	 *
-	 * @param content
-	 * @param special
+	 * @param content the content
+	 * @param special a flag
 	 */
 	public final void pasteText(String content, boolean special) {
 		if (log.isDebugEnabled()) {
@@ -716,39 +715,6 @@ public class Screen5250 {
 	 * @param aidKey
 	 *            The aid key to be sent to the host
 	 *
-	 * @see #sendKeys
-	 * @see TN5250jConstants#AID_CLEAR
-	 * @see #AID_ENTER
-	 * @see #AID_HELP
-	 * @see #AID_ROLL_UP
-	 * @see #AID_ROLL_DOWN
-	 * @see #AID_ROLL_LEFT
-	 * @see #AID_ROLL_RIGHT
-	 * @see #AID_PRINT
-	 * @see #AID_PF1
-	 * @see #AID_PF2
-	 * @see #AID_PF3
-	 * @see #AID_PF4
-	 * @see #AID_PF5
-	 * @see #AID_PF6
-	 * @see #AID_PF7
-	 * @see #AID_PF8
-	 * @see #AID_PF9
-	 * @see #AID_PF10
-	 * @see #AID_PF11
-	 * @see #AID_PF12
-	 * @see #AID_PF13
-	 * @see #AID_PF14
-	 * @see #AID_PF15
-	 * @see #AID_PF16
-	 * @see #AID_PF17
-	 * @see #AID_PF18
-	 * @see #AID_PF19
-	 * @see #AID_PF20
-	 * @see #AID_PF21
-	 * @see #AID_PF22
-	 * @see #AID_PF23
-	 * @see #AID_PF24
 	 */
 	public void sendAid(int aidKey) {
 

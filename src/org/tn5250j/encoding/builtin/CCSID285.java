@@ -30,7 +30,6 @@ package org.tn5250j.encoding.builtin;
 
 /**
  * @author master_jaf
- * @see http://www-01.ibm.com/software/globalization/ccsid/ccsid285.jsp
  */
 public final class CCSID285 extends CodepageConverterAdapter {
 

@@ -111,7 +111,7 @@ public class SessionConfig {
   }
 
   /**
-   * @return
+   * @return properties
    * @deprecated see {@link SessionConfiguration}
    */
   @Deprecated
@@ -242,7 +242,8 @@ public class SessionConfig {
   }
 
   /**
-   * @return
+   * @param prop properties
+   * @return string from properties
    * @deprecated see {@link SessionConfiguration}
    */
   @Deprecated
@@ -256,7 +257,8 @@ public class SessionConfig {
   }
 
   /**
-   * @return
+   * @param prop properties
+   * @return integer from properties
    * @deprecated see {@link SessionConfiguration}
    */
   @Deprecated
@@ -274,7 +276,8 @@ public class SessionConfig {
   }
 
   /**
-   * @return
+   * @param prop properties
+   * @return color from properties
    * @deprecated see {@link SessionConfiguration}
    */
   @Deprecated
@@ -319,7 +322,8 @@ public class SessionConfig {
   }
 
   /**
-   * @return
+   * @param prop property name
+   * @return float from properties
    * @deprecated see {@link SessionConfiguration}
    */
   @Deprecated
@@ -328,7 +332,9 @@ public class SessionConfig {
   }
 
   /**
-   * @return
+   * @param propertyName name of the key
+   * @param defaultValue provide default value if key is not present
+   * @return parsed float from properties
    * @deprecated see {@link SessionConfiguration}
    */
   @Deprecated

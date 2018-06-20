@@ -689,7 +689,7 @@ public class My5250 implements BootListener, SessionListener, EmulatorActionList
 	}
 
 	/**
-	 * @param view
+	 * @param view GUI View interface
 	 */
 	protected void closingDown(GUIViewInterface view) {
 
@@ -747,7 +747,7 @@ public class My5250 implements BootListener, SessionListener, EmulatorActionList
 
 	/**
 	 * Really closes the tab/session
-	 * @param sesspanel
+	 * @param sesspanel a session panel
 	 */
 	protected void closeSessionInternal(SessionPanel sesspanel) {
 		GUIViewInterface f = getParentView(sesspanel);

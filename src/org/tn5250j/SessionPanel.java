@@ -226,8 +226,8 @@ public class SessionPanel extends JPanel implements RubberBandCanvasIF, SessionC
 	/**
 	 * This routine allows areas to be bounded by using the keyboard
 	 *
-	 * @param ke
-	 * @param last
+	 * @param ke	key event
+	 * @param last	last
 	 */
 	public void doKeyBoundArea(KeyEvent ke,String last) {
 
@@ -670,7 +670,7 @@ public class SessionPanel extends JPanel implements RubberBandCanvasIF, SessionC
 	}
 
 	/**
-	 * @todo: Change to be mnemonic key.
+	 * coming up: Change to be mnemonic key.
 	 *
 	 * This toggles the ruler line.
 	 *
@@ -693,7 +693,7 @@ public class SessionPanel extends JPanel implements RubberBandCanvasIF, SessionC
 
 	/**
 	 *
-	 * Copy & Paste start code
+	 * Copy and Paste start code
 	 *
 	 */
 	public final void actionCopy() {
@@ -976,7 +976,7 @@ public class SessionPanel extends JPanel implements RubberBandCanvasIF, SessionC
 	}
 
 	/**
-	 * @return
+	 * @return the session name
 	 * @see org.tn5250j.Session5250#getSessionName()
 	 */
 	public String getSessionName() {

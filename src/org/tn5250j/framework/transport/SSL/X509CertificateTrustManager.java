@@ -1,8 +1,7 @@
 package org.tn5250j.framework.transport.SSL;
 
 /*
- * @(#)X509CertificateTrustManager.java
- *
+ * 
  * Copyright:    Copyright (c) 2001
  *
  * This program is free software; you can redistribute it and/or modify
@@ -37,7 +36,7 @@ import javax.swing.JOptionPane;
  * can be made without requiring the server to have a certificate signed by a
  * CA (Verisign, Thawte, etc.).
  *
- * @author Stephen M. Kennedy <skennedy@tenthpowertech.com>
+ * @author Stephen M. Kennedy
  * @deprecated.  no longer used.
  *
  */
@@ -61,6 +60,9 @@ public class X509CertificateTrustManager implements X509TrustManager {
    * Checks the server certificate.  If it isn't trusted by the trust manager
    * passed to the constructor, then the user will be prompted to accept the
    * certificate.
+   * 
+   * @param chain a chain
+   * @param type a type
    */
   public void checkServerTrusted(X509Certificate[] chain, String type)
   		throws CertificateException {

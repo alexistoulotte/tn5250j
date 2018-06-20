@@ -45,6 +45,7 @@ protected Component currentPage;
 
    /**
     * Returns whether the page is the last page.
+    * @return true if page is the last one
     */
    public boolean isLastPage() {
       return isLastPage;
@@ -52,6 +53,7 @@ protected Component currentPage;
 
    /**
     * Returns whether the event should be allowed to finish processing.
+    * @return true if the vent can finish the process
     */
    public boolean getAllowChange() {
       return allowChange;
@@ -59,6 +61,7 @@ protected Component currentPage;
 
    /**
     * Sets whether the event should be allowed to finish processing.
+    * @param v flag
     */
    public void setAllowChange(boolean v) {
       allowChange = v;
@@ -66,6 +69,7 @@ protected Component currentPage;
 
    /**
     * Returns the next page.
+    * @return component
     */
    public Component getNewPage() {
       return newPage;
@@ -73,6 +77,7 @@ protected Component currentPage;
 
    /**
     * Sets the next page.
+    * @param component
     */
    public void setNewPage(Component p) {
       newPage = p;
@@ -80,6 +85,7 @@ protected Component currentPage;
 
    /**
     * Returns the current page on which the <code>JCWizardEvent</code> occured.
+    * @return component
     */
    public Component getCurrentPage() {
       return currentPage;

@@ -318,7 +318,8 @@ public class ScreenFields {
     * @param length The length from startPos to include in the search.
     * @param dir An OHIO_DIRECTION value:
     *
-    * <table BORDER COLS=3 WIDTH="50%" >
+    * <table BORDER WIDTH="50%" >
+    * <caption>summary</caption>
     * <tr><th>Constant </th><th>Value</th>
     *                            <th>Description</th></tr>
     * <tr><td>OS_OHIO_DIRECTION_FORWARD </td><td>0</td>

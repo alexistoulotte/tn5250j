@@ -46,7 +46,6 @@ public class SocketConnector {
    * Set the type of SSL connection to use.  Specify null or an empty string
    * to use a plain socket.
    * @param type The SSL connection type
-   * @see org.tn5250j.framework.transport.SSLConstants
    */
   public void setSSLType(String type) {
     sslType = type;

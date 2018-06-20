@@ -309,7 +309,7 @@ public class GlobalConfigure extends ConfigureFactory {
    * Save the setting in the registry using the key passed in with no header
    * output.
    *
-   * @param regKey
+   * @param regKey registry key
    */
   @Override
   public void saveSettings(String regKey) {
@@ -321,8 +321,8 @@ public class GlobalConfigure extends ConfigureFactory {
    * Save the settings in the registry using the key passed with a header
    * in the output.
    *
-   * @param regKey
-   * @param header
+   * @param regKey registry key
+   * @param header header
    */
   @Override
   public void saveSettings(String regKey, String header) {
@@ -334,8 +334,8 @@ public class GlobalConfigure extends ConfigureFactory {
    * Save the settings in the registry using the key passed with a header
    * in the output.
    *
-   * @param regKey
-   * @param header
+   * @param regKey registry key
+   * @param header header
    */
   @Override
   public void saveSettings(String regKey, String fileName, String header) {
@@ -369,8 +369,8 @@ public class GlobalConfigure extends ConfigureFactory {
   /**
    * Place the Properties in the registry under a given registry name
    *
-   * @param regKey
-   * @param regProps
+   * @param regKey registry key
+   * @param regProps properties
    */
   @Override
   public void setProperties(String regKey, Properties regProps) {
@@ -382,9 +382,9 @@ public class GlobalConfigure extends ConfigureFactory {
   /**
    * Set the properties for the given registry key.
    *
-   * @param regKey
-   * @param fileName
-   * @param header
+   * @param regKey 		registry key
+   * @param fileName	a file name
+   * @param header		header
    */
   @Override
   public void setProperties(String regKey, String fileName, String header) {  //LG NEW
@@ -394,10 +394,10 @@ public class GlobalConfigure extends ConfigureFactory {
   /**
    * Set the properties for the given registry key.
    *
-   * @param regKey
-   * @param fileName
-   * @param header
-   * @param createFile
+   * @param regKey		registry key
+   * @param fileName	a file name
+   * @param header		header
+   * @param createFile	flag if settings should be saved
    */
   @Override
   public void setProperties(String regKey, String fileName, String header,
@@ -444,8 +444,8 @@ public class GlobalConfigure extends ConfigureFactory {
   /**
    * Returns the properties associated with a given registry key.
    *
-   * @param regKey
-   * @return
+   * @param regKey registry key
+   * @return properties
    */
   @Override
   public Properties getProperties(String regKey) {
@@ -528,9 +528,9 @@ public class GlobalConfigure extends ConfigureFactory {
    * Returns the setting from the given key of the global properties or the
    * default passed if the property does not exist.
    *
-   * @param key
-   * @param def
-   * @return
+   * @param key	key
+   * @param def	definition
+   * @return a string
    */
   @Override
   public String getProperty(String key, String def) {
@@ -543,8 +543,8 @@ public class GlobalConfigure extends ConfigureFactory {
   /**
    * Returns the setting from the given key of the global properties.
    *
-   * @param key
-   * @return
+   * @param key key
+   * @return a string
    */
   @Override
   public String getProperty(String key) {
@@ -554,7 +554,7 @@ public class GlobalConfigure extends ConfigureFactory {
   /**
    * Private helper to return the settings directory
    *
-   * @return
+   * @return a string
    */
   private String settingsDirectory() {
     //System.out.println(settings.getProperty("emulator.settingsDirectory"));
@@ -565,7 +565,7 @@ public class GlobalConfigure extends ConfigureFactory {
   /**
    * Not sure yet so be careful using this.
    *
-   * @return
+   * @return a class loader
    */
   public ClassLoader getClassLoader() {
 

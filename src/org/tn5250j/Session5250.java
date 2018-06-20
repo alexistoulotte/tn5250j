@@ -106,7 +106,6 @@ public class Session5250 implements SessionInterface {
 
 	/**
 	 * @return true when SSL is used and socket is connected.
-	 * @see {@link tnvt#isSslSocket()}
 	 */
 	public boolean isSslSocket() {
 		if (this.vt != null) {
@@ -118,7 +117,6 @@ public class Session5250 implements SessionInterface {
 
 	/**
 	 * @return true when SSL is configured but not necessary in use
-	 * @see {@link #isSslSocket()}
 	 */
 	public boolean isSslConfigured() {
 		if (sesProps.get(TN5250jConstants.SSL_TYPE) != null) {
@@ -289,11 +287,6 @@ public class Session5250 implements SessionInterface {
 	 *
 	 * @param scan enables scanning when true; disables otherwise.
 	 *
-	 * @see tnvt#setCommandScanning(boolean);
-	 * @see tnvt#isCommandScanning();
-	 * @see tnvt#scan();
-	 * @see tnvt#parseCommand();
-	 * @see scanned(String,String)
 	 */
 	public void setScanningEnabled(boolean scan)
 	{
@@ -309,11 +302,6 @@ public class Session5250 implements SessionInterface {
 	 *
 	 * @return true if command scanning is enabled; false otherwise.
 	 *
-	 * @see tnvt#setCommandScanning(boolean);
-	 * @see tnvt#isCommandScanning();
-	 * @see tnvt#scan();
-	 * @see tnvt#parseCommand();
-	 * @see scanned(String,String)
 	 */
 	public boolean isScanningEnabled()
 	{
@@ -334,11 +322,6 @@ public class Session5250 implements SessionInterface {
 	 * @param command discovered in the 5250 stream.
 	 * @param remainder are all the other characters on the screen.
 	 *
-	 * @see tnvt#setCommandScanning(boolean);
-	 * @see tnvt#isCommandScanning();
-	 * @see tnvt#scan();
-	 * @see tnvt#parseCommand();
-	 * @see scanned(String,String)
 	 */
 	public final void fireScanned(String command, String remainder) {
 		scanListenerLock.readLock().lock();
@@ -369,7 +352,7 @@ public class Session5250 implements SessionInterface {
 	}
 
 	/**
-	 * @param listener
+	 * @param listener	a scan listener
 	 */
 	public final void removeScanListener(ScanListener listener) {
 		scanListenerLock.writeLock().lock();

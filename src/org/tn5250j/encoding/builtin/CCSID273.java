@@ -31,7 +31,6 @@ package org.tn5250j.encoding.builtin;
 
 /**
  * @author master_jaf
- * @see http://www-01.ibm.com/software/globalization/ccsid/ccsid273.jsp
  */
 public final class CCSID273 extends CodepageConverterAdapter {
 

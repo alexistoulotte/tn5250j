@@ -30,7 +30,6 @@ package org.tn5250j.encoding.builtin;
 
 /**
  * @author master_jaf
- * @see http://www-01.ibm.com/software/globalization/ccsid/ccsid870.jsp
  */
 public final class CCSID870 extends CodepageConverterAdapter {
 

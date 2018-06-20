@@ -244,7 +244,6 @@ public final class tnvt implements Runnable {
 
 	/**
 	 * @return true when SSL is used and socket is connected.
-	 * @see {@link #isConnected()}
 	 */
 	public boolean isSslSocket() {
 		if (this.connected && this.sock != null && this.sock instanceof SSLSocket) {
@@ -658,7 +657,6 @@ public final class tnvt implements Runnable {
 	/**
 	 * Opens a dialog and asks the user before sending a request
 	 *
-	 * @see {@link #systemRequest(String)}
 	 */
 	public final void systemRequest() {
 		final String sysreq = this.controller.showSystemRequest();
@@ -667,7 +665,6 @@ public final class tnvt implements Runnable {
 
 	/**
 	 * @param sr - system request option
-	 * @see {@link #systemRequest(String)}
 	 */
 	public final void systemRequest(char sr) {
 		systemRequest(Character.toString(sr));

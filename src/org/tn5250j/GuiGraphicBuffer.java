@@ -482,7 +482,7 @@ public class GuiGraphicBuffer implements ScreenOIAListener,
 
 	/**
 	 * Update the configuration settings
-	 * @param pce
+	 * @param pce session configuration event
 	 */
 	public void onConfigChanged(SessionConfigEvent pce) {
 		this.propertyChange(pce);
@@ -722,13 +722,6 @@ public class GuiGraphicBuffer implements ScreenOIAListener,
 		gui.repaint();
 	}
 
-	/**
-	 *
-	 *
-	 * @param x
-	 * @param y
-	 * @return
-	 */
 	public int getPosFromView(int x, int y) {
 
 		// we have to translate the point into a an upper left 0,0 based format
@@ -790,9 +783,9 @@ public class GuiGraphicBuffer implements ScreenOIAListener,
 	/**
 	 * This will return the screen coordinates of a row and column.
 	 *
-	 * @param r
-	 * @param c
-	 * @param point
+	 * @param r 	row
+	 * @param c		column
+	 * @param point	just a point
 	 */
 	public void getPointFromRowCol(int r, int c, Point point) {
 
@@ -822,8 +815,8 @@ public class GuiGraphicBuffer implements ScreenOIAListener,
 	 * Translate the starting point of mouse movement to encompass a full
 	 * character
 	 *
-	 * @param start
-	 * @return Point
+	 * @param start a point to start
+	 * @return Point translated point
 	 */
 	public Point translateStart(Point start) {
 
@@ -841,8 +834,8 @@ public class GuiGraphicBuffer implements ScreenOIAListener,
 	 * Translate the ending point of mouse movement to encompass a full
 	 * character
 	 *
-	 * @param end
-	 * @return Point
+	 * @param end		end point
+	 * @return Point	translated point
 	 */
 	public Point translateEnd(Point end) {
 
@@ -869,7 +862,7 @@ public class GuiGraphicBuffer implements ScreenOIAListener,
 	 *
 	 * If there is no area bounded then the full screen area is returned.
 	 *
-	 * @param bounds
+	 * @param bounds a rectangle
 	 */
 	public void getBoundingArea(Rectangle bounds) {
 
@@ -899,8 +892,8 @@ public class GuiGraphicBuffer implements ScreenOIAListener,
 	 * Convinience method to resize the screen area such as when the parent
 	 * frame is resized.
 	 *
-	 * @param width
-	 * @param height
+	 * @param width		width of the screen
+	 * @param height	height of the screen
 	 */
 	protected final void resizeScreenArea(int width, int height) {
 
@@ -1166,6 +1159,7 @@ public class GuiGraphicBuffer implements ScreenOIAListener,
 
 	/**
 	 * Returns a pointer to the graphics area that we can draw on
+	 * @return a pointer
 	 */
 	public Graphics2D getDrawingArea() {
 
@@ -1312,6 +1306,8 @@ public class GuiGraphicBuffer implements ScreenOIAListener,
 
 	/**
 	 * Returns a pointer to the graphics area that we can write on
+	 * 
+	 * @return a pointer
 	 */
 	public Graphics2D getWritingArea(Font font) {
 
@@ -1933,9 +1929,6 @@ public class GuiGraphicBuffer implements ScreenOIAListener,
 		}
 	}
 
-	/**
-	 * get the
-	 */
 	public Rectangle2D getTextArea () {
 		return tArea;
 	}

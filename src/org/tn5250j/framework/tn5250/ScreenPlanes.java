@@ -535,7 +535,6 @@ public class ScreenPlanes {
 	 * @param bufferLength
 	 * @param plane
 	 * @return The number of characters copied to the buffer
-	 * @throws OhioException
 	 */
 	public synchronized int GetScreen(char buffer[], int bufferLength, int plane) {
 
@@ -565,7 +564,6 @@ public class ScreenPlanes {
 	 * @param length
 	 * @param plane
 	 * @return The number of characters copied to the buffer
-	 * @throws OhioException
 	 */
 	public synchronized int GetScreen(char buffer[], int bufferLength, int from,
 			int length, int plane)
@@ -614,7 +612,6 @@ public class ScreenPlanes {
 	 * @param length
 	 * @param plane
 	 * @return The number of characters copied to the buffer.
-	 * @throws OhioException
 	 */
 	public synchronized int GetScreen(char buffer[], int bufferLength, int row,
 			int col, int length, int plane)
@@ -654,7 +651,6 @@ public class ScreenPlanes {
 	 * @param endPos
 	 * @param plane
 	 * @return The number of characters copied to the buffer
-	 * @throws OhioException
 	 */
 	protected int GetScreenRect(char buffer[], int bufferLength,
 			int startPos, int endPos, int plane)
@@ -703,7 +699,6 @@ public class ScreenPlanes {
 	 * @param endCol
 	 * @param plane
 	 * @return The number characters copied to the buffer
-	 * @throws OhioException
 	 */
 	protected int GetScreenRect(char buffer[], int bufferLength,
 			int startRow, int startCol,

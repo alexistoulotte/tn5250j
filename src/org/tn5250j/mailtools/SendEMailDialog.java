@@ -86,7 +86,6 @@ public class SendEMailDialog extends GenericTn5250JFrame implements Runnable  {
 	 *
 	 * @param parent
 	 * @param session
-    * @param sendScreen
 	 */
 	public SendEMailDialog(Frame parent, SessionPanel session) {
       this(parent,session,true);

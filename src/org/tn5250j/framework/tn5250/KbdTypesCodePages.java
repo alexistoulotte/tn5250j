@@ -1,9 +1,8 @@
 package org.tn5250j.framework.tn5250;
 
 /**
- * IBM i 7.1 Information Center > Programmierung > i5/OS globalization > Globalization reference information > Keyboard reference information
+ * IBM i 7.1 Information Center  Programmierung  i5/OS globalization  Globalization reference information  Keyboard reference information
  *
- * @see <a href="http://publib.boulder.ibm.com/infocenter/iseries/v7r1m0/index.jsp?topic=/nls/rbagsnatlangkeybrdtype.htm">National language keyboard types and SBCS code pages</a>
  */
 public enum KbdTypesCodePages {
 

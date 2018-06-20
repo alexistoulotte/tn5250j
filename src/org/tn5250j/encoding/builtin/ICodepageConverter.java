@@ -14,7 +14,7 @@ public interface ICodepageConverter extends ICodePage {
 	 * Example '273' or 'CP1252'. This name should be unique,
 	 * cause it's used in user settungs and so on.
 	 *
-	 * @return
+	 * @return a String
 	 */
 	public abstract String getName();
 
@@ -22,12 +22,14 @@ public interface ICodepageConverter extends ICodePage {
 	 * Returns a short description for this converter.
 	 * For Example '273 - German, EBCDIC'
 	 *
-	 * @return
+	 * @return a String
 	 */
 	public abstract String getDescription();
 
 	/**
 	 * Does special initialization stuff for this converter.
+	 * 
+	 * @return a converter
 	 */
 	public abstract ICodepageConverter init();
 

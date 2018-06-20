@@ -25,7 +25,6 @@ public class My5250Applet extends JApplet {
 
    private TN5250jLogger log;
 
-   /**Get a parameter value*/
    public String getParameter(String key, String def) {
 
       return isStandalone ? System.getProperty(key, def) :
@@ -172,6 +171,9 @@ public class My5250Applet extends JApplet {
 
    /**
     * Returns a local specified by the string localString
+    * 
+    * @param localString a string to parse
+    * @return a locale
     */
    protected static Locale parseLocale(String localString) {
       int x = 0;

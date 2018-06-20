@@ -1,8 +1,6 @@
 package org.tn5250j.framework.transport;
 
 /*
- * @(#)SSLInterface.java
- *
  * Copyright:    Copyright (c) 2001
  *
  * This program is free software; you can redistribute it and/or modify

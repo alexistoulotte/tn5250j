@@ -531,9 +531,9 @@ public class ScreenPlanes {
 	 *  extra position for the terminating null character.
 	 *  <p>
 	 *
-	 * @param buffer
-	 * @param bufferLength
-	 * @param plane
+	 * @param buffer buffer
+	 * @param bufferLength length
+	 * @param plane plane
 	 * @return The number of characters copied to the buffer
 	 */
 	public synchronized int GetScreen(char buffer[], int bufferLength, int plane) {
@@ -558,11 +558,11 @@ public class ScreenPlanes {
 	 * the buffer must include one extra position for the terminating null character.
 	 * </p>
 	 *
-	 * @param buffer
-	 * @param bufferLength
-	 * @param from
-	 * @param length
-	 * @param plane
+	 * @param buffer buffer
+	 * @param bufferLength length
+	 * @param from where to start
+	 * @param length where to end
+	 * @param plane plane
 	 * @return The number of characters copied to the buffer
 	 */
 	public synchronized int GetScreen(char buffer[], int bufferLength, int from,
@@ -605,12 +605,12 @@ public class ScreenPlanes {
 	 *  character.
 	 *  </p>
 	 *
-	 * @param buffer
-	 * @param bufferLength
-	 * @param row
-	 * @param col
-	 * @param length
-	 * @param plane
+	 * @param buffer buffer
+	 * @param bufferLength length
+	 * @param row row to start
+	 * @param col column to start
+	 * @param length length
+	 * @param plane plane
 	 * @return The number of characters copied to the buffer.
 	 */
 	public synchronized int GetScreen(char buffer[], int bufferLength, int row,
@@ -645,11 +645,11 @@ public class ScreenPlanes {
 	 * the number of characters copied.
 	 * </p>
 	 *
-	 * @param buffer
-	 * @param bufferLength
-	 * @param startPos
-	 * @param endPos
-	 * @param plane
+	 * @param buffer buffer
+	 * @param bufferLength length
+	 * @param startPos start position
+	 * @param endPos end position
+	 * @param plane plane
 	 * @return The number of characters copied to the buffer
 	 */
 	protected int GetScreenRect(char buffer[], int bufferLength,
@@ -691,13 +691,13 @@ public class ScreenPlanes {
 	 * the number of characters copied.
 	 * </p>
 	 *
-	 * @param buffer
-	 * @param bufferLength
-	 * @param startRow
-	 * @param startCol
-	 * @param endRow
-	 * @param endCol
-	 * @param plane
+	 * @param buffer buffer
+	 * @param bufferLength length
+	 * @param startRow row to start
+	 * @param startCol column to start
+	 * @param endRow row to end
+	 * @param endCol column to end
+	 * @param plane plane
 	 * @return The number characters copied to the buffer
 	 */
 	protected int GetScreenRect(char buffer[], int bufferLength,

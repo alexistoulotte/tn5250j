@@ -26,14 +26,14 @@ public interface SSLInterface {
 	/**
 	 * Initialize the components required to create a new client socket
 	 * when createSSLSocket is called.
-	 * @param type The ssl socket type (SSLv2, SSLv3, TLS)
+	 * @param sslType The ssl socket type (SSLv2, SSLv3, TLS)
 	 */
    public abstract void init(String sslType);
 
    /**
     * Create a new socket
-    * @param destination
-    * @param port
+    * @param destination a destination
+    * @param port a port to connect to
     * @return new socket, or null if none could be created.
     */
    public abstract Socket createSSLSocket(String destination, int port);

@@ -56,8 +56,8 @@ public class SocketConnector {
    * socket type has not been specified <i>(by setSSLType(String))</i>, then
    * a plain socket will be created.  Otherwise, a new SSL socket of the
    * specified type will be created.
-   * @param destination
-   * @param port
+   * @param destination destination host
+   * @param port a port to connect to
    * @return a new client socket, or null if
    */
   public Socket createSocket(String destination, int port) {

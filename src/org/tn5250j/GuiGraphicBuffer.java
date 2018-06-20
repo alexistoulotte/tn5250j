@@ -957,6 +957,8 @@ public class GuiGraphicBuffer implements ScreenOIAListener,
 
 	/**
 	 * Draw the operator information area
+	 * 
+	 * @return graphics object
 	 */
 	public Graphics2D drawOIA () {
 

@@ -56,7 +56,7 @@ public class Stream5250 {
      * This method takes a byte array and initializes the object information
      *    to be used.
      *
-     * @param abyte0
+     * @param abyte0 bytes
      */
     public void initialize(byte abyte0[]) {
 

@@ -149,7 +149,7 @@ public final class ButtonTabComponent extends JPanel implements SessionListener 
 	/**
 	 * Notify all the tab listeners that this specific tab was selected to close.
 	 *
-	 * @param tabToClose
+	 * @param tabToClose number of the tab that was closed
 	 */
 	protected void fireTabClosed(int tabToClose) {
 		if (closeListeners != null) {

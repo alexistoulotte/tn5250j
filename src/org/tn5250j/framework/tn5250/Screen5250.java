@@ -1891,7 +1891,7 @@ public class Screen5250 {
 	 * or not. If it is then the field at this position becomes the current
 	 * working field
 	 *
-	 * @param pos
+	 * @param pos number of position
 	 * @return true or false
 	 */
 	public boolean isInField(int pos) {

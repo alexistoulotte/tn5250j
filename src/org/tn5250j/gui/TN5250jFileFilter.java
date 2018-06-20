@@ -122,8 +122,8 @@ public class TN5250jFileFilter extends FileFilter {
    /**
    * Return the extension portion of the file's name .
    *
-   * @see #getExtension
-   * @see FileFilter#accept
+   * @param f file
+   * @return string
    */
    public String getExtension(File f) {
       if(f != null) {
@@ -154,6 +154,8 @@ public class TN5250jFileFilter extends FileFilter {
    *   filter.addExtension("tif");
    *
    * Note that the "." before the extension is not needed and will be ignored.
+   * 
+   * @param extension an extension as string
    */
    public void addExtension(String extension) {
       if(filters == null) {
@@ -197,9 +199,7 @@ public class TN5250jFileFilter extends FileFilter {
    * Sets the human readable description of this filter. For
    * example: filter.setDescription("Gif and JPG Images");
    *
-   * @see setDescription
-   * @see setExtensionListInDescription
-   * @see isExtensionListInDescription
+   * @param description a description
    */
    public void setDescription(String description) {
       this.description = description;
@@ -213,9 +213,7 @@ public class TN5250jFileFilter extends FileFilter {
    * Only relevent if a description was provided in the constructor
    * or using setDescription();
    *
-   * @see getDescription
-   * @see setDescription
-   * @see isExtensionListInDescription
+   * @param b flag
    */
    public void setExtensionListInDescription(boolean b) {
       useExtensionsInDescription = b;
@@ -229,9 +227,7 @@ public class TN5250jFileFilter extends FileFilter {
    * Only relevent if a description was provided in the constructor
    * or using setDescription();
    *
-   * @see getDescription
-   * @see setDescription
-   * @see setExtensionListInDescription
+   * @return flag
    */
    public boolean isExtensionListInDescription() {
       return useExtensionsInDescription;
@@ -240,6 +236,8 @@ public class TN5250jFileFilter extends FileFilter {
    /**
     * Set the extension to be used for this type if one is not provided
     *    This will append the first key of the filter contained in the list
+    *    
+    * @param f file
     */
    public String setExtension(File f) {
 

@@ -54,7 +54,7 @@ public class SystemRequestDialog {
 
 
 	/**
-	 * @param parent
+	 * @param parent component
 	 */
 	public SystemRequestDialog(Component parent) {
 		super();
@@ -94,7 +94,7 @@ public class SystemRequestDialog {
 	 * Shows the dialog and returns the given input
 	 * or null if the operation was canceled.
 	 *
-	 * @return
+	 * @return string
 	 */
 	public String show() {
 		String result = null;

@@ -175,10 +175,10 @@ public final class tnvt implements Runnable {
 	private WTDSFParser sfParser;
 
 	/**
-	 * @param session
-	 * @param screen52
-	 * @param type
-	 * @param support132
+	 * @param session 5250 session object
+	 * @param screen52 5250 screen object
+	 * @param type flag
+	 * @param support132 flag
 	 */
 	public tnvt(Session5250 session, Screen5250 screen52, boolean type, boolean support132) {
 
@@ -1320,7 +1320,7 @@ public final class tnvt implements Runnable {
 
 	/**
 	 *
-	 * @throws IOException
+	 * @throws IOException io exception
 	 */
 	public final void restoreScreen() throws IOException {
 		int which = 0;
@@ -1617,11 +1617,11 @@ public final class tnvt implements Runnable {
 	 * looking at section 12.4 of the 5250 Functions Reference manual
 	 *
 	 *
-	 * @param cat
-	 * @param modifier
-	 * @param uByte1
-	 * @param uByte2
-	 * @param from
+	 * @param cat number
+	 * @param modifier number
+	 * @param uByte1 number
+	 * @param uByte2 number
+	 * @param from a string
 	 *
 	 */
 	protected void sendNegResponse(int cat, int modifier, int uByte1,

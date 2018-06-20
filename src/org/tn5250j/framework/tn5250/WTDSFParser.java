@@ -506,25 +506,7 @@ public class WTDSFParser {
 
    }
 
-	/**
-	 * Creates a window on the screen
-	 *
-	 * @param depth
-	 * @param width
-	 * @param type
-	 * @param gui
-	 * @param monoAttr
-	 * @param colorAttr
-	 * @param ul
-	 * @param upper
-	 * @param ur
-	 * @param left
-	 * @param right
-	 * @param ll
-	 * @param bottom
-	 * @param lr
-	 */
-	protected void createWindow(int depth, int width, int type, boolean gui,
+   protected void createWindow(int depth, int width, int type, boolean gui,
 			int monoAttr, int colorAttr, int ul, int upper, int ur, int left,
 			int right, int ll, int bottom, int lr) {
 

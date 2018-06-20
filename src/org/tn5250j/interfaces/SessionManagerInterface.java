@@ -1,5 +1,4 @@
 /*
- * @(#)SessionManagerInterface.java
  * Copyright:    Copyright (c) 2001
  *
  * This program is free software; you can redistribute it and/or modify
@@ -34,7 +33,7 @@ public interface SessionManagerInterface {
 	public abstract Sessions getSessions();
 
 	/**
-	 * @param sessionObject
+	 * @param sessionObject a panel object
 	 */
 	public abstract void closeSession(SessionPanel sessionObject);
 

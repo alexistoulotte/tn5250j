@@ -52,7 +52,7 @@ public class ConfirmTabCloseDialog {
 
 
 	/**
-	 * @param parent
+	 * @param parent component
 	 */
 	public ConfirmTabCloseDialog(Component parent) {
 		super();
@@ -85,7 +85,7 @@ public class ConfirmTabCloseDialog {
 	 * Shows the dialog and returns the true if the close was confirmed
 	 * or false if the operation was canceled.
 	 *
-	 * @return
+	 * @return flag
 	 */
 	public boolean show() {
 		dialog.setVisible(true);

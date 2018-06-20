@@ -158,7 +158,7 @@ public class ScreenFields {
     *    which the workstation operator has begun entering data.) If the
     *    requirements of the field have not been satisfied, an error occurs.
     *
-    * @return
+    * @return flag
     *
     */
    public boolean isCanSendAid() {
@@ -317,6 +317,7 @@ public class ScreenFields {
     *                 1,1 will be included in the search).
     * @param length The length from startPos to include in the search.
     * @param dir An OHIO_DIRECTION value:
+    * @param ignoreCase flag
     *
     * <table BORDER WIDTH="50%" >
     * <caption>summary</caption>

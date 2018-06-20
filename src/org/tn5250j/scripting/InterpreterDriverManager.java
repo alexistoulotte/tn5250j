@@ -50,8 +50,10 @@ public class InterpreterDriverManager {
    /**
     * Execute a script string
     * Execute the string supplied according to the langauge specified
+    * @param session session panel object
     * @param script script to be executed
     * @param language language for interpreting the script string
+    * @throws InterpreterDriver.InterpreterException maybe an exception
     */
    public static void executeScript(SessionPanel session, String script, String language)
                         throws InterpreterDriver.InterpreterException {
@@ -70,7 +72,9 @@ public class InterpreterDriverManager {
      * Exceute a script file.
      * The interpreter driver supporting the language for this file
      * is deduced from file name extension
+     * @param session session panel object
      * @param scriptFile file name containing script
+     * @throws InterpreterDriver.InterpreterException maybe an exception
      */
    public static void executeScriptFile(SessionPanel session,String scriptFile)
                      throws InterpreterDriver.InterpreterException {
@@ -92,6 +96,7 @@ public class InterpreterDriverManager {
      * The interpreter driver supporting the language for this file
      * is deduced from file name extension
      * @param scriptFile file name containing script
+     * @throws InterpreterDriver.InterpreterException maybe an exception
      */
    public static void executeScriptFile(String scriptFile)
                      throws InterpreterDriver.InterpreterException {
@@ -112,6 +117,7 @@ public class InterpreterDriverManager {
     /**
      * Check if there is a driver that supports the language.
      * @param scriptFile file name containing script
+     * @return flag
      */
    public static boolean isScriptSupported(String scriptFile) {
       String extension

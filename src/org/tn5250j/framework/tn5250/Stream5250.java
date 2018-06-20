@@ -130,7 +130,7 @@ public class Stream5250 {
     * the length of the segment.
     *
     * @return a new byte array containing the bytes of the segment.
-    * @throws Exception
+    * @throws Exception exception
     */
    public final byte[] getSegment() throws Exception {
 
@@ -153,7 +153,7 @@ public class Stream5250 {
     * @param length - length of segment to return
     * @param adjustPos - adjust the position of the buffer to the end of the seg
     *                      ment
-    * @throws Exception
+    * @throws Exception exception
     */
    public final void getSegment(byte[] segment, int length, boolean adjustPos)
                throws Exception {

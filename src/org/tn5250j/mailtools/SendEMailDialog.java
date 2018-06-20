@@ -84,8 +84,8 @@ public class SendEMailDialog extends GenericTn5250JFrame implements Runnable  {
 	/**
 	 * Constructor to send the screen information
 	 *
-	 * @param parent
-	 * @param session
+	 * @param parent the parent frame
+	 * @param session panel object
 	 */
 	public SendEMailDialog(Frame parent, SessionPanel session) {
       this(parent,session,true);
@@ -94,8 +94,9 @@ public class SendEMailDialog extends GenericTn5250JFrame implements Runnable  {
 	/**
 	 * Constructor to send the screen information
 	 *
-	 * @param parent
-	 * @param session
+	 * @param parent parent frame object
+	 * @param session session panel object
+	 * @param sendScreen flag
 	 */
 	public SendEMailDialog(Frame parent, SessionPanel session, boolean sendScreen) {
       super();
@@ -267,8 +268,9 @@ public class SendEMailDialog extends GenericTn5250JFrame implements Runnable  {
 	/**
 	 * Constructor to send a file
 	 *
-	 * @param parent
-	 * @param session
+	 * @param parent parent frame object
+	 * @param session session panel object
+	 * @param fileName a file name
 	 */
 	public SendEMailDialog(Frame parent, SessionPanel session, String fileName) {
 
@@ -346,7 +348,9 @@ public class SendEMailDialog extends GenericTn5250JFrame implements Runnable  {
 
 	/**
 	 * Send the e-mail on its way.
-	 * @param sem
+	 * 
+	 * @param parent frame object
+	 * @param sem sendmail object
 	 */
 	private void sendIt(Frame parent, SendEMail sem) {
 
@@ -429,7 +433,7 @@ public class SendEMailDialog extends GenericTn5250JFrame implements Runnable  {
 	/**
 	 * Configure the SMTP server information
 	 *
-	 * @param parent
+	 * @param parent frame object
 	 */
 	private void configureSMTP(Frame parent) {
 
@@ -445,8 +449,8 @@ public class SendEMailDialog extends GenericTn5250JFrame implements Runnable  {
 	/**
 	 * Create the main e-mail panel for display
 	 *
-	 * @param fileName
-	 * @return
+	 * @param fileName a file name
+	 * @return a jpanel object
 	 */
 	private JPanel setupMailPanel(String fileName) {
 
@@ -683,8 +687,8 @@ public class SendEMailDialog extends GenericTn5250JFrame implements Runnable  {
 	 * Set the combo box items to the string token from to.
 	 * The separator is a '|' character.
 	 *
-	 * @param to
-	 * @param boxen
+	 * @param to string
+	 * @param boxen jcombobox object
 	 */
 	private void setToCombo(String to, JComboBox boxen) {
 
@@ -701,9 +705,9 @@ public class SendEMailDialog extends GenericTn5250JFrame implements Runnable  {
 	 * Creates string of tokens from the combobox items.
 	 * The separator is a '|' character.  It does not save duplicate items.
 	 *
-	 * @param to
-	 * @param boxen
-	 * @return
+	 * @param to string
+	 * @param boxen box object
+	 * @return string
 	 */
 	private String getToTokens(String to, JComboBox boxen) {
 

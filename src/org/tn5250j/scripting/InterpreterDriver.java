@@ -17,7 +17,7 @@ public interface InterpreterDriver  {
     * Execute a script string.
     * @param session a session object
     * @param script script a string to be interpreted
-    * @exception throw a InterpreterDriver.InterpreterException
+    * @throws InterpreterDriver.InterpreterException
     *            which wraps the exception throw by underlying
     *            interpreter
     */
@@ -28,7 +28,7 @@ public interface InterpreterDriver  {
     * Execute a script file.
     * @param session a session object
     * @param scriptFile script a name of file to be interpreted
-    * @exception throw a InterpreterDriver.InterpreterException
+    * @throws InterpreterDriver.InterpreterException
     *            which wraps the exception throw by underlying
     *            interpreter
     */
@@ -38,7 +38,7 @@ public interface InterpreterDriver  {
    /**
     * Execute a script file.
     * @param scriptFile a name of file to be interpreted
-    * @exception throw a InterpreterDriver.InterpreterException
+    * @throws a InterpreterDriver.InterpreterException
     *            which wraps the exception throw by underlying
     *            interpreter
     */

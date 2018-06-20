@@ -139,6 +139,8 @@ public abstract class KeyboardHandler extends KeyAdapter implements KeyChangeLis
     *  Remove the references to all listeners before closing
     *
     *  Added by Luc to fix a memory leak.
+    *  
+    *  @param session session panel object
     */
    public void sessionClosed(SessionPanel session) {
       keyMap.removeKeyChangeListener(this);
@@ -166,6 +168,8 @@ public abstract class KeyboardHandler extends KeyAdapter implements KeyChangeLis
    /**
     * Utility method, calls one of <code>keyPressed()</code>,
     * <code>keyReleased()</code>, or <code>keyTyped()</code>.
+    * 
+    * @param evt a key event
     */
    public void processKeyEvent(KeyEvent evt) {
       switch(evt.getID())

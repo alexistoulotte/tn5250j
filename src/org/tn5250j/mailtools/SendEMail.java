@@ -164,6 +164,9 @@ public class SendEMail {
 
    /**
     * This method processes the send request from the compose form
+    * 
+    * @return flag
+    * @throws Exception an exception
     */
    public boolean send() throws Exception {
 

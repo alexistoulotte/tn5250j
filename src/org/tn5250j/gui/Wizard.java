@@ -87,9 +87,8 @@ public class Wizard extends JPanel {
 
    /**
     * Advance to the next page
-    * @see #previous
-    * @see #finish
-    * @see #cancel
+    * 
+    * @return flag
     */
    public boolean next() {
       boolean is_last_page = false;
@@ -158,9 +157,8 @@ public class Wizard extends JPanel {
 
    /**
     * Move to the previous page
-    * @see #next
-    * @see #finish
-    * @see #cancel
+    * 
+    * @param flag
     */
    public boolean previous() {
       boolean is_last_page = false;
@@ -232,9 +230,8 @@ public class Wizard extends JPanel {
 
    /**
     * Invokes the registered "finish" action.
-    * @see #next
-    * @see #previous
-    * @see #cancel
+    * 
+    * @return flag
     */
    public boolean finish() {
       boolean is_last_page = false;
@@ -261,9 +258,8 @@ public class Wizard extends JPanel {
 
    /**
     * Invokes the registered "cancel" action.
-    * @see #next
-    * @see #previous
-    * @see #finish
+    *
+    * @return flag
     */
    public boolean cancel() {
       boolean is_last_page = false;
@@ -290,10 +286,6 @@ public class Wizard extends JPanel {
 
    /**
     * Invokes the registered "help" action.
-    * @see #next
-    * @see #previous
-    * @see #finish
-    * @see #cancel
     */
    public void help() {
       boolean is_last_page = false;
@@ -317,6 +309,8 @@ public class Wizard extends JPanel {
 
    /**
     * Retrieves the current visible page.
+    * 
+    * @return component
     */
    protected Component getCurrentPage() {
       int ncomponents = getComponentCount();
@@ -332,6 +326,8 @@ public class Wizard extends JPanel {
 
    /**
     * Adds a new <code>WizardListener</code> to the list.
+    * 
+    * @param l a listener
     */
    public void addWizardListener(WizardListener l) {
       if (listeners == null)
@@ -342,6 +338,8 @@ public class Wizard extends JPanel {
 
    /**
     * Removes a <code>ValidateListener</code> from the list.
+    * 
+    * @param l a listener to remove
     */
    public void removeWizardListener(WizardListener l) {
          if (listeners == null) {
@@ -352,6 +350,9 @@ public class Wizard extends JPanel {
 
    /**
     * Adds a page child.
+    * 
+    * @param page component
+    * @return component
     */
    public Component add(Component page) {
       add(page, page.getName());
@@ -362,7 +363,6 @@ public class Wizard extends JPanel {
     * A listener on the "next" button that is implemented as an anonymous
     * inner class that simply invokes the containing classes "next()"
     * method.
-    * @see #next
     */
    transient protected ActionListener nextListener = new ActionListener() {
       public void actionPerformed(ActionEvent e) {
@@ -374,7 +374,6 @@ public class Wizard extends JPanel {
     * A listener on the "previous" button that is implemented as an anonymous
     * inner class that simply invokes the containing classes "previous()"
     * method.
-    * @see #previous
     */
    transient protected ActionListener previousListener = new ActionListener() {
       public void actionPerformed(ActionEvent e) {
@@ -386,7 +385,6 @@ public class Wizard extends JPanel {
     * A listener on the "finish" button that is implemented as an anonymous
     * inner class that simply invokes the containing classes "finish()"
     * method.
-    * @see #finish
     */
    transient protected ActionListener finishListener = new ActionListener() {
       public void actionPerformed(ActionEvent ev) {
@@ -398,7 +396,6 @@ public class Wizard extends JPanel {
     * A listener on the "cancel" button that is implemented as an anonymous
     * inner class that simply invokes the containing classes "cancel()"
     * method.
-    * @see #cancel
     */
    transient protected ActionListener cancelListener = new ActionListener() {
       public void actionPerformed(ActionEvent ev) {
@@ -410,7 +407,6 @@ public class Wizard extends JPanel {
     * A listener on the "help" button that is implemented as an anonymous
     * inner class that simply invokes the containing classes "help()"
     * method.
-    * @see #help
     */
    transient protected ActionListener helpListener = new ActionListener() {
       public void actionPerformed(ActionEvent ev) {

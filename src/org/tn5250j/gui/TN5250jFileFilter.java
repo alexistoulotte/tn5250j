@@ -43,7 +43,7 @@ public class TN5250jFileFilter extends FileFilter {
    * Creates a file filter that accepts files with the given extension.
    * Example: new TN5250jFileFilter("jpg");
    *
-   * @see #addExtension
+   * @param extension an extension
    */
    public TN5250jFileFilter(String extension) {
       this(extension,null);
@@ -56,7 +56,8 @@ public class TN5250jFileFilter extends FileFilter {
    * Note that the "." before the extension is not needed. If
    * provided, it will be ignored.
    *
-   * @see #addExtension
+   * @param extension an extension
+   * @param description a description
    */
    public TN5250jFileFilter(String extension, String description) {
       this();
@@ -73,7 +74,7 @@ public class TN5250jFileFilter extends FileFilter {
    * Note that the "." before the extension is not needed adn
    * will be ignored.
    *
-   * @see #addExtension
+   * @param filters some filter
    */
    public TN5250jFileFilter(String[] filters) {
       this(filters, null);
@@ -85,7 +86,8 @@ public class TN5250jFileFilter extends FileFilter {
    *
    * Note that the "." before the extension is not needed and will be ignored.
    *
-   * @see #addExtension
+   * @param filters some filter
+   * @param description a description
    */
    public TN5250jFileFilter(String[] filters, String description) {
       this();
@@ -238,6 +240,7 @@ public class TN5250jFileFilter extends FileFilter {
     *    This will append the first key of the filter contained in the list
     *    
     * @param f file
+    * @return string
     */
    public String setExtension(File f) {
 

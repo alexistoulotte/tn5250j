@@ -62,6 +62,8 @@ protected Window dialog = null;
     * the classpath. For example, if an image was located in
     * /test/examples/image.gif, and the classpath specified contains /test,
     * the constructor should be passed "/examples/image.gif".
+    * 
+    * @param image_location an image location
     */
    public TN5250jSplashScreen(String image_location) {
 
@@ -71,6 +73,8 @@ protected Window dialog = null;
 
    /**
     * Creates a splash screen given an Icon image.
+    * 
+    * @param image an icon
     */
    public TN5250jSplashScreen(ImageIcon image) {
       initialize(image);
@@ -78,6 +82,8 @@ protected Window dialog = null;
 
    /**
     * Creates the Splash screen window and configures it.
+    * 
+    * @param iimage an icon
     */
    protected void initialize(ImageIcon iimage) {
 
@@ -201,6 +207,8 @@ protected Window dialog = null;
     * This method will show or hide the splash screen.  Once the splash
     * screen is hidden, the splash screen window will be disposed. This means
     * the splash screen cannot become visible again.
+    * 
+    * @param show flag
     */
    public void setVisible(boolean show) {
       if (show == true && dialog != null && f != null && !dialog.isVisible()) {

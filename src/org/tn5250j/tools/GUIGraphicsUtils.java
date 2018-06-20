@@ -1534,6 +1534,7 @@ public class GUIGraphicsUtils {
 	 * an ImageIcon
 	 * 
 	 * @param image image to use
+	 * @return an image icon
 	 */
 	public static ImageIcon createImageIcon (String image) {
 		URL file=null;

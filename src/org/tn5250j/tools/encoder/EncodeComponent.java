@@ -51,6 +51,9 @@ public class EncodeComponent {
     * @param component component to encode
     * @param encoding type of encoding to use (Currently GIF or PNG)
     * @param output stream to which to write the encoding
+    * 
+    * @throws IOException an io exception
+    * @throws EncoderException a special encoder exception
     */
    public static void encode(Encoding encoding, Component component, OutputStream output) throws IOException, EncoderException {
       Encoder encoder = encoding.getEncoder();
@@ -67,6 +70,9 @@ public class EncodeComponent {
     * @param encoding type of encoding to use (GIF, PNG, JPEG, EPS, PS, PDF,
     * or PCL)
     * @param file file to which to write the encoding
+    * 
+    * @throws IOException an io exception
+    * @throws EncoderException a special encoder exception 
     */
    public static void encode(Encoding encoding, Component component, File file) throws IOException, EncoderException {
       OutputStream os = new java.io.FileOutputStream(file);
@@ -87,6 +93,11 @@ public class EncodeComponent {
 
           /**
            * Constructs and new image encoder.
+           * 
+           * @param short_name name
+           * @param long_name name
+           * @param encoder_class classname
+           * @param failure_message message
            */
          public Encoding(String short_name, String long_name,
                      String encoder_class, String failure_message) {
@@ -98,6 +109,8 @@ public class EncodeComponent {
 
          /**
           * Return the short brief name of the supported encoding type
+          * 
+          * @return string
           */
          public String getShortName() {
             return shortName;
@@ -105,6 +118,8 @@ public class EncodeComponent {
 
          /**
           * Return the long name of the supported encoding type
+          * 
+          * @return string
           */
          public String getLongName() {
             return longName;
@@ -113,6 +128,8 @@ public class EncodeComponent {
           /**
            * Returns a string representation bassed on the long and short name of the
            * Encoder.
+           * 
+           * @return string
            */
          public String toString() {
             return getLongName() + " (" + getShortName() + ")";
@@ -121,6 +138,8 @@ public class EncodeComponent {
          /**
           * Message to return about possible reasons for encoder load
           * failure (i.e. getEncoder() returns null)
+          * 
+          * @return string
           */
          public String getFailureMessage() {
             return failureMessage != null ? failureMessage : "There was a failure loading encoder.";
@@ -128,6 +147,7 @@ public class EncodeComponent {
 
          /**
           * Return an encoder for this encoding type.
+          * 
           * @return returns null if it cannot locate or load the encoder
           */
          public Encoder getEncoder() {

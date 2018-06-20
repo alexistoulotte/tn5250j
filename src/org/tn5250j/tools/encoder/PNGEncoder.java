@@ -209,15 +209,6 @@ public class PNGEncoder extends AbstractImageEncoder {
 
    }
 
-   /**
-	* @param outarray
-	* @param pixelarray
-	* @param cmodel
-	* @param width
-	* @param height
-	* @return
-	* @throws EncoderException
-	*/
    public int compress(byte[] outarray, int[] pixelarray, ColorModel cmodel, int width, int height) throws EncoderException {
        byte[] inarray = new byte[(pixelarray.length * 3) + height];
        for (int i = 0; i < height; i++) {
@@ -231,14 +222,6 @@ public class PNGEncoder extends AbstractImageEncoder {
        return compressInternal(outarray, inarray);
    }
 
-   /**
-    * @param outarray
-	* @param pixelarray
-	* @param width
-	* @param height
-	* @return
-	* @throws EncoderException
-	*/
 	public int compress(byte[] outarray, byte[] pixelarray, int width, int height) throws EncoderException {
        byte[] inarray = new byte[pixelarray.length + height];
        for (int i = 0; i < height; i++) {
@@ -250,12 +233,6 @@ public class PNGEncoder extends AbstractImageEncoder {
        return compressInternal(outarray, inarray);
    }
 
-   /**
-    * @param outarray
-    * @param inarray
-    * @return
- 	* @throws EncoderException
- 	*/
 	private int compressInternal(byte[] outarray, byte[] inarray) throws EncoderException {
 		Deflater deflater = new Deflater(Deflater.DEFAULT_COMPRESSION);
 		try {

@@ -36,6 +36,8 @@ public class EncoderException extends Exception {
 
 /**
     * Creates an exception with the given message.
+    * 
+    * @param msg message
     */
    public EncoderException(String msg) {
        super(msg);

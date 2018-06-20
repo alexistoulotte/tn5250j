@@ -50,7 +50,7 @@ public class ExportFileFilter extends FileFilter {
    * Creates a file filter that accepts files with the given extension.
    * Example: new XTFRFileFilter("jpg");
    *
-   * @see #addExtension
+   * @param extension an extension
    */
    public ExportFileFilter(String extension) {
       this(extension,null);

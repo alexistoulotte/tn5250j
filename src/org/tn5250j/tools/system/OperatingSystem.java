@@ -77,6 +77,8 @@ public class OperatingSystem
    //{{{ isWindows() method
    /**
     * Returns if we're running Windows 95/98/ME/NT/2000/XP.
+    * 
+    * @return flag, true if windows is
     */
    public static final boolean isWindows()
    {
@@ -86,6 +88,8 @@ public class OperatingSystem
    //{{{ isUnix() method
    /**
     * Returns if we're running Unix (this includes MacOS X).
+    * 
+    * @return flag, true is unix os
     */
    public static final boolean isUnix()
    {
@@ -95,6 +99,8 @@ public class OperatingSystem
    //{{{ isMacOS() method
    /**
     * Returns if we're running MacOS X.
+    * 
+    * @return true, if mac os
     */
    public static final boolean isMacOS()
    {
@@ -104,6 +110,8 @@ public class OperatingSystem
    //{{{ isJava14() method
    /**
     * Returns if Java 2 version 1.4 is in use.
+    * 
+    * @return true, if old java14 is used
     */
    public static final boolean hasJava14()
    {

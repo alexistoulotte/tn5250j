@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.vebqa</groupId>
 	<artifactId>tn5250j</artifactId>
-	<version>0.7.6.2</version>
+	<version>0.7.6.3</version>
 
 	<url>https://github.com/vebqa/tn5250j</url>
 	<name>TN5250j</name>
@@ -188,7 +188,7 @@
 		<dependency>
 			<groupId>com.sun.mail</groupId>
 			<artifactId>javax.mail</artifactId>
-			<version>1.6.1</version>
+			<version>1.6.2</version>
 		</dependency>
 		<dependency>
 			<groupId>com.lowagie</groupId>
@@ -203,7 +203,7 @@
 		<dependency>
 			<groupId>net.sf.jt400</groupId>
 			<artifactId>jt400</artifactId>
-			<version>9.5</version>
+			<version>9.6</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>

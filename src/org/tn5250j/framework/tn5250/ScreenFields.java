@@ -319,7 +319,7 @@ public class ScreenFields {
     * @param dir An OHIO_DIRECTION value:
     * @param ignoreCase flag
     *
-    * <table BORDER WIDTH="50%" >
+    * <table>
     * <caption>summary</caption>
     * <tr><th>Constant </th><th>Value</th>
     *                            <th>Description</th></tr>

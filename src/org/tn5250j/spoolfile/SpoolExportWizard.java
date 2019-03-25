@@ -68,11 +68,11 @@ import com.ibm.as400.access.PrintObjectTransformedInputStream;
 import com.ibm.as400.access.PrintParameterList;
 import com.ibm.as400.access.SpooledFile;
 import com.ibm.as400.vaccess.IFSFileDialog;
-import com.lowagie.text.Document;
-import com.lowagie.text.PageSize;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.pdf.BaseFont;
-import com.lowagie.text.pdf.PdfWriter;
+//import com.lowagie.text.Document;
+//import com.lowagie.text.PageSize;
+//import com.lowagie.text.Paragraph;
+//import com.lowagie.text.pdf.BaseFont;
+//import com.lowagie.text.pdf.PdfWriter;
 
 /**
  *
@@ -146,9 +146,10 @@ JPanel contentPane;
    JButton nextButton;
 
    // pdf variables
-   private PdfWriter bos;
-   private Document document;
-   private com.lowagie.text.Font font;
+// @TOOD remove itext   
+//   private PdfWriter bos;
+//   private Document document;
+//   private com.lowagie.text.Font font;
 
    // output stream
    private FileOutputStream fw;
@@ -874,7 +875,8 @@ JPanel contentPane;
                   // new page
                   case 0x0C:
                      writeBuffer(sb.toString());
-                     document.newPage();
+// @TOOD remove itext
+//                     document.newPage();
                      sb.setLength(0);
                      break;
                   default:
@@ -910,15 +912,16 @@ JPanel contentPane;
     */
    private void writeBuffer(String s) {
 
-      if (!document.isOpen())
-         document.open();
-
-      try {
-         document.add(new Paragraph(s,font));
-      }
-      catch (com.lowagie.text.DocumentException de) {
-         System.out.println(de);
-      }
+// @TOOD remove itext
+//      if (!document.isOpen())
+//         document.open();
+//
+//      try {
+//         document.add(new Paragraph(s,font));
+//      }
+//      catch (com.lowagie.text.DocumentException de) {
+//         System.out.println(de);
+//      }
    }
 
    /**
@@ -981,83 +984,84 @@ JPanel contentPane;
             return;
 
          // On pdf's then we need to create a PDF document
-         if (document == null) {
-
-            document = new Document();
-
-            // create the pdf writer based on selection of pc or ifs file
-            if (ifs.isSelected()) {
-               bos = PdfWriter.getInstance(document,ifsfw);
-            }
-            else {
-               bos = PdfWriter.getInstance(document,fw);
-            }
-
-            // create the base font
-            BaseFont bf = BaseFont.createFont("Courier", "Cp1252", false);
-
-            // set the default size of the font to 9.0
-            float fontsize = 9.0f;
-
-            // if we have a font selectd then try to use it
-            if (fontSize.getText().length() > 0)
-               fontsize = Float.parseFloat(fontSize.getText().trim());
-
-            // create the pdf font to use within the document
-            font = new com.lowagie.text.Font(bf, fontsize,
-                                             com.lowagie.text.Font.NORMAL);
-
-            // set the PDF properties of the supplied properties
-            if (author.getText().length() > 0)
-               document.addAuthor(author.getText());
-            if (title.getText().length() > 0)
-               document.addTitle(title.getText());
-            if (subject.getText().length() > 0)
-               document.addSubject(subject.getText());
-
-            // set the page sizes and the page orientation
-            String ps = (String)pageSize.getSelectedItem();
-
-            if (ps.equals("A3")) {
-               if (portrait.isSelected())
-                  document.setPageSize(PageSize.A3);
-               else
-                  document.setPageSize(PageSize.A3.rotate());
-
-            }
-
-            if (ps.equals("A4")) {
-               if (portrait.isSelected())
-                  document.setPageSize(PageSize.A4);
-               else
-                  document.setPageSize(PageSize.A4.rotate());
-            }
-
-            if (ps.equals("A5")) {
-               if (portrait.isSelected())
-                  document.setPageSize(PageSize.A5);
-               else
-                  document.setPageSize(PageSize.A5.rotate());
-            }
-            if (ps.equals("LETTER")) {
-               if (portrait.isSelected())
-                  document.setPageSize(PageSize.LETTER);
-               else
-                  document.setPageSize(PageSize.LETTER.rotate());
-            }
-            if (ps.equals("LEGAL")) {
-               if (portrait.isSelected())
-                  document.setPageSize(PageSize.LEGAL);
-               else
-                  document.setPageSize(PageSize.LEGAL.rotate());
-            }
-            if (ps.equals("LEDGER")) {
-               if (portrait.isSelected())
-                  document.setPageSize(PageSize.LEDGER);
-               else
-                  document.setPageSize(PageSize.LEDGER.rotate());
-            }
-         }
+// @TOOD remove itext
+//         if (document == null) {
+//
+//            document = new Document();
+//
+//            // create the pdf writer based on selection of pc or ifs file
+//            if (ifs.isSelected()) {
+//               bos = PdfWriter.getInstance(document,ifsfw);
+//            }
+//            else {
+//               bos = PdfWriter.getInstance(document,fw);
+//            }
+//
+//            // create the base font
+//            BaseFont bf = BaseFont.createFont("Courier", "Cp1252", false);
+//
+//            // set the default size of the font to 9.0
+//            float fontsize = 9.0f;
+//
+//            // if we have a font selectd then try to use it
+//            if (fontSize.getText().length() > 0)
+//               fontsize = Float.parseFloat(fontSize.getText().trim());
+//
+//            // create the pdf font to use within the document
+//            font = new com.lowagie.text.Font(bf, fontsize,
+//                                             com.lowagie.text.Font.NORMAL);
+//
+//            // set the PDF properties of the supplied properties
+//            if (author.getText().length() > 0)
+//               document.addAuthor(author.getText());
+//            if (title.getText().length() > 0)
+//               document.addTitle(title.getText());
+//            if (subject.getText().length() > 0)
+//               document.addSubject(subject.getText());
+//
+//            // set the page sizes and the page orientation
+//            String ps = (String)pageSize.getSelectedItem();
+//
+//            if (ps.equals("A3")) {
+//               if (portrait.isSelected())
+//                  document.setPageSize(PageSize.A3);
+//               else
+//                  document.setPageSize(PageSize.A3.rotate());
+//
+//            }
+//
+//            if (ps.equals("A4")) {
+//               if (portrait.isSelected())
+//                  document.setPageSize(PageSize.A4);
+//               else
+//                  document.setPageSize(PageSize.A4.rotate());
+//            }
+//
+//            if (ps.equals("A5")) {
+//               if (portrait.isSelected())
+//                  document.setPageSize(PageSize.A5);
+//               else
+//                  document.setPageSize(PageSize.A5.rotate());
+//            }
+//            if (ps.equals("LETTER")) {
+//               if (portrait.isSelected())
+//                  document.setPageSize(PageSize.LETTER);
+//               else
+//                  document.setPageSize(PageSize.LETTER.rotate());
+//            }
+//            if (ps.equals("LEGAL")) {
+//               if (portrait.isSelected())
+//                  document.setPageSize(PageSize.LEGAL);
+//               else
+//                  document.setPageSize(PageSize.LEGAL.rotate());
+//            }
+//            if (ps.equals("LEDGER")) {
+//               if (portrait.isSelected())
+//                  document.setPageSize(PageSize.LEDGER);
+//               else
+//                  document.setPageSize(PageSize.LEDGER.rotate());
+//            }
+//         }
       }
       catch(IOException _ex) {
          System.out.println("Cannot open 1 " + _ex.getMessage());
@@ -1071,8 +1075,9 @@ JPanel contentPane;
 
    private void closeOutputFile() {
 
-         document.close();
-         document = null;
+// @TOOD remove itext
+//         document.close();
+//         document = null;
 
    }
 

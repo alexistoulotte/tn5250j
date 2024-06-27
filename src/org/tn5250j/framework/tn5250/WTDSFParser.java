@@ -477,6 +477,10 @@ public class WTDSFParser {
                         }
                         done = true;
                         break;
+                     case 0x58:
+                        // Bug with SUBFILE & multipage
+                        done = true;
+                        break;
                      default:
                         vt.sendNegResponse(NR_REQUEST_ERROR,0x03,0x01,0x01,"invalid wtd structured field sub command "
                                                    + ( pos - 1));
